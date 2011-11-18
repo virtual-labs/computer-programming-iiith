@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<head></head>
+<h1 id="main-title">
+Basic Control Flow(Conditionals)
+</h1>
+
+<div id="introduction">
+	<h2>Introduction </h2>
+	<p>
+
+ A program can be thought of as a sequence of instructions which are followed by a computer to solve a problem. The sequence in which these instructions are executed can be different from the sequence in which they are specified. Control flow (or alternatively, flow of control) refers to the order in which the individual statements or instructions of a program are executed or evaluated. This changing of the order of execution of instructions can be unconditional or conditional. The former case clearly specifies form while line the execution should be resumed. The latter case, this decision about form which line the exection should be resumed is made based on the value of an expression. Hence, it can be used to implement "decision-making" which means selection of one alternative amongst several others according to given conditions. An example of "decision-making" in the real world could be: "If the traffic light is green, keep moving; if it is red, then stop". In the case of programmming, "decision-making" essentially means deciding from which statement the execution should be resumed. <br>
+Some constructs allow skipping a set of instructions if a condition is false, whereas, some others execution of only one set of statements based on the truthfulness of a condition. These constructs can be placed inside another to create more complex flow of control. This enclosing of structures into one another is called nesting. A switching construct allows decision-making based on the state of a variable or an expression. Its purpose is to allow the value of a variable or an expression to control the flow of program execution via a multiway branch. These constructs are known as conditionals because they alter the flow of control based on a condition. <br><br>
+Programming languages also allow direct continuation of execution of a statement at a different location using unconditional branch or jump statements for which no condition is required to be evaluated. These can even be used to stop the execution of the program. <br><br>
+Apart from this, there is another class of constructs called loops, which can be used to repeat a set of instructions. This repetition can be done a fixed number of times or until some specific condition is met. Just like the conditionals, the loops can also be nested. Loops and conditionals can also be nested inside each other. <br><br>
+In this lab, we shall see the working of conditional constructs.
+
+
+
+	</p> 
+</div>
+<div id="theory">
+        <h2>Theory</h2>
+        <p>
+In order to understand the working of conditionals, it is important to understand the term block. A group of code statements that are associated and intended to be executed as a unit is referred to as a block. In C, the beginning of a block of code is denoted by writing a set of statements with in curly braces. It is not necessary to place a semicolon after the end of a block. Blocks can be left empty. A block and can be written inside another block of statements, in such a case the former block is said to be nesting inside the other block. Example of a block:<br>
+<code>
+<br>
+{<br>
+x=10;<br>
+y=x+10;<br>
+int z;<br>
+z=x+y;<br>
+}
+<br>
+</code>
+<br>
+A conditional is a statement that instructs the computer to execute a certain block of code or alter certain data only if a specific condition has been met. Conditionals are used to implement decision-making based on the truthfulness of a condition or the state of a variable or an expression. The most common conditional construct is the If-Else constrct and Switch-Case construct. 
+
+<br>
+<br>
+<big>If construct</big>
+<br>
+It is the most simple construct which is used to specify that a block should only be executed only if certian condition is true. The syntax of an if statement is as follows:
+<br>
+<code><pre>
+if(<i>test expression</i>)
+{
+        block1;
+}
+</pre></code>
+Here, if the <i>test expression</i> is true, then statements in <i>block1</i> are executed. If the <i>test expression</i> is false then statements in <i>block1</i> are completly ignored.
+<br>
+<br>
+<big>If-Else construct</big>
+<br>
+This construct is used to execute one out of two blocks of statements based on the truthvalue of a conditon. The syntax of an If-else statement is as follows:
+<br>
+<code><pre>
+if(<i>test expression</i>)
+{
+        block1;
+}
+else
+{
+        block2;
+}
+</pre></code><br>
+Here, if the <i>test expression</i> is true, then statements in <i>block1</i> are executed. If the <i>test expression</i> is false then statements in <i>block2</i> are executed.
+
+<br>
+<br>
+
+<big> Nesting example</big><br>
+If and If-else statements can be nested to create more complex control flows:
+<code><pre>
+if(<i>test expression1</i>){ 
+        statements1; 
+        if(<i>test expression2</i>){ 
+                statements2; 
+        } 
+} 
+else{ 
+        statements3; 
+        if(<i>test expression3</i>){ 
+                statements4; 
+        } 
+        else{ 
+                statements5; 
+        } 
+} 
+</pre></code>
+Here if the <i>test expression1</i> is true then <i>statements1</i> are executed followed by the evaluation of <i>test expression2</i>. If <i>test expression2</i> is true, <i>statements2</i> are executed; if it is false, then <i>statements2</i> are completly ignored.<br>
+ If <i>test expression1</i> is false, then <i>statements3</i> are executed followed by evalution of <i>test expression3</i>. If <i>test expression3</i> is true <i>statements4</i> are executed. If <i>test expression3</i> is false then <i>statements5</i> are executed.
+<br>
+<br>
+
+<big>If-Else ladder</big>
+<br>
+When a series mutually exclusive conditions(for example, deciding grade based on marks) have to be checked, then we may use the If-else ladder construct. This construct is essentially created by repeatedly nesting an if-else construct inside the else part of an If-else construct. The conditions are evaluated from top to bottom and whenever a condition is true, then the statements corresponding to the true part of the condition are executed and we exit out of the construct. The final else part is executed only if all the conditions get evaluated to false. It takes the following general form:
+<br>
+<code><pre>
+if (<i>test expression1</i>) 
+   statements1; 
+else if (<i>test expression2</i>) 
+   statements2; 
+else if (<i>test expression3</i>) 
+   statements3; 
+else if (<i>test expression4</i>) 
+   statements4; 
+else 
+   statements5; 
+</pre></code>
+Here, the <i>test expression1</i> is evaluated first and if it is true then the <i>statements1</i> are executed and we exit out of the construct. If <i>test expression1</i> is false, then <i>test expression2</i> is evaluated. If <i>test expression2</i> is true then <i>statements2</i> are executed and we exit out of the construct.  If <i>test expression2</i> is false, then <i>test expression3</i> is evaluated. If <i>test expression3</i> is true then <i>statements3</i> are executed and we exit out of the construct.  If <i>test expression3</i> is false, then <i>test expression4</i> is evaluated. If <i>test expression4</i> is true then <i>statements4</i> are executed and we exit out of the construct.  If <i>test expression4</i> is false, then <i>statements4</i> are executed.
+
+<br>
+<br>
+<big>Switch-Case constructs</big><br>
+A Switch-Case is a construct which is used to allow jumping to one of the multiple blocks. This decision is taken based on the value of a variable or an expression. Its purpose is to allow the value of a variable or an expression to control the flow of program execution via a multiway branch. A default case may also be specified to be executed when the given state has not been addressed by any of the other cases. 
+<br>
+<code><pre>
+switch ( <i>test expression</i> ) { 
+  case 1 :  
+    statement1;  
+  break;   
+  case 2 :  
+    statement2;  
+  break;  
+  case n :  //an example general case
+    statementn;  
+  break;   
+  default : 
+    statements_default; 
+} 
+</pre></code>
+Here, if <i>test expression</i> evaluates to 1, then <i>statements1</i> are evaluated. And then due to <i>break</i>, we exit the construct. 
+If <i>test expression</i> evaluates to 2, then <i>statements1</i> are evaluated. And then due to <i>break</i>, we exit the construct. 
+Similarly, if <i>test expression</i> evaluates to some value n for which a case has been written under <i>case n:</i>, then <i>statementsn</i> are evaluated. And then due to <i>break</i>, we exit the construct.
+If <i>test expression</i> evalutes to a value for which a case has not been listed, then <i>statements_default</i> are executed. 
+
+<br>
+<br>
+
+
+<b><i>Important: </i></b><br>
+
+1. Take special note of the difference between the relational operator "equal to" which is denoted by "==", and the assignement operator which is denoted by "=".  Misuse of "=" in the place of "==" won't be reported by the compiler. <br>
+For example:<br>
+Writing,
+<code>
+if(x=3){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statements1;<br>
+}<br>
+</code>
+instead of
+<code>
+if(x==3){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statements1;<br>
+}<br>
+</code>
+will result into the test expression for the if construct to always be true and hence, statements1 are always executed.
+<br>
+2. Typically, the last statement for each case is a break statement. This causes program execution to jump to the statement following the closing bracket of the switch statement, which is what one would normally want to happen. However if the break statement is omitted, program execution continues with the first line of the next case, if any. This is called a fall-through.<br>
+
+
+        </p>
+</div>
+
+
+
+<div id="objective">
+	<h2> Objective </h2> 
+	<p>
+1. To learn how decision making is done while programming. 
+        <br>
+        2. To learn about the various simple constructs used for control flow. 
+        <br>
+
+	</p> 
+</div>
+
+
+<div id="Lab">
+	<h2>Lab</h2>
+<ol>
+  <span style='font-weight:bold;'> Experiment Part I: Position of Point w.r.t to a Rectangle</span><br><br>
+
+	<i> Here we shall see how the problem of determining whether a given point is inside or outside a rectangle can be solved using various conditional constructs.</i>
+	<br>
+	</span><br>
+	<h3>Manual</h3>
+	
+	1. Initialize the values of the variables on the top left. X and Y denote the x and y coordinate of the input point.<br>
+        2. Select the code prototype with which you would like to solve the problem.<br>
+        3. Click start to begin the expriment.<br>
+        4. Click Next to get a step by step execution of the code along with the reasoning which is displayed on the right hand side panel. <br>
+	<img src="images/vlab2_a.jpg">
+<br>
+<br>
+        <span style='font-weight:bold;'>Experiment Part II: Selecting the Day of a week</span><br><br>
+
+	<i> Here we shall see how a switching construct works by associating one number to each of the days.</i><br><br>
+	<h3>Manual</h3>
+        1. First, select a day from the top left by clicking on the correspoding radio button or enter any number in the textbox directly. Then, click on SUBMIT.<br>
+	2. Select the code prototype with which you would like to solve the problem.
+        3. Click on the activated START button to begin the experiment.<br>
+        4. Click Next to get a step by step execution of the code.The changes in local variables can be visualized on the bottom left of the screen. The OUTPUT can be visualized on the right part of the screen. <br>
+	<img src="images/vlab2_b.jpg">
+<br>
+
+
+</ol>   
+	<br>
+	   <a onclick="window.open('http://cvit.iiit.ac.in/trecvid08/keyframes/Vlab/Lab2/if_else.php', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;" class="qtlink" href="http://cvit.iiit.ac.in/trecvid08/keyframes/Vlab/Lab2/if_else.php">
+	Go to lab on Basic Control Flow(Conditionals)[Click here] 
+	</a>
+</div>
+
+
+
+<div id="quizzes">
+	<h2>Quiz</h2>
+	  <ol>
+		<br>
+                <li><b>1. Which statement is used in Switch to prevent fall through.</b></li> 
+                <ol> 
+                <li>a. break</li>
+                <li>b. continue</li>
+                <li>c. exit</li>
+                <li>d. else</li>
+                </ol>
+		<br>
+                <li><b>2. Every switch construct can be replaced by a series of if-else statements</b> </li> 
+                <ol> 
+                <li>a. True</li>
+                <li>b. False</li>
+                </ol>
+		<br>
+                <li><b>3. In an if-else construct, curly braces can be ignored for the else part if the block contains only one statement</b></li>
+                <ol>
+                <li>a. True</li>
+                <li>b. False</li>
+                </ol>
+		<br>
+                <li><b>4. An if-else construct can be replaced by a set of if constructs</b></li>
+                <ol>
+                <li>a. True</li>
+                <li>b. false</li>
+                </ol>
+        </ol>
+
+</div>
+
+<div id="readings"> 
+	<h2> further-readings </h2> 
+       <ol>
+ <li><a class="more" target="_blank" href="http://en.wikibooks.org/wiki/C_Programming/Control">http://en.wikibooks.org/wiki/C_Programming/Control</a></li>
+ <li><a class="more" target="_blank" href="http://en.wikipedia.org/wiki/Control_flow">http://en.wikipedia.org/wiki/Control_flow</a></li>
+ <li><a class="more" target="_blank" href="http://www.exforsys.com/tutorials/c-language/decision-making-and-branching-in-c.html">http://www.exforsys.com/tutorials/c-language/decision-making-and-branching-in-c.html</a></li>
+    </ol>
+
+</div>
+

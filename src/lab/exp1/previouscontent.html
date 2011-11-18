@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head></head>
+<h1 id="main-title">
+Expression Evaluation
+</h1>
+
+<div id="introduction">
+	<h2>Introduction </h2>
+	<p>
+Evaluating an exression is one of the most common operations in programming. An expression may be evaluated to assign a variable a new value or to test the truthfulness of a test condition. An exression can be written in the postfix, prefix or infix form. <br><br>
+In <b>prefix</b> form the operator is specified before the two operands:<br>
+operator,a,b<br>
+Example: +ab<br><br>
+In <b>infix</b> form the operator is specified between the two operands:<br>
+a,operator,b<br>
+Example: a+b<br><br>
+In <b>postfix</b> form the operator is specified after the two operands:<br>
+a,b,operator<br>
+Example: ab+<br><br>
+
+ In almost all the programming languages expressions are written in the infix form. Later, these expression can be converted into the equivalent postfix or prefix form by the computer for evaluation. An expression used in computer programming is very similar to an algerbraic expression and when many operators are specified in a expression, then the evaluation takes place according to the precedence of operators. A paranthesis can be used to override the precedence of operators and force the evalutation of a sub-expression within the expression.
+
+	</p> 
+</div>
+<div id="theory">
+        <h2>Theory</h2>
+        <p>
+   Evaluating an expression involves repeatedly solving the sub-expression in the lowest level paranthesis and substituting its value to solve the bigger expression. If an expression or sub-expression does not have a paranthesis, then we can directly compute its value with respect to the precedence of the operators involved in the expression. That is the operator with higher precedence is solved before the operator with lower precedence. The following table gives the precedence order of all the operators:<br> <br>
+<b><font color="#FF0000"><a href=table.html> Table of precedence (Chick here)</a></font></b>        <br><br>
+        The following example illustrates the evaluation of an expression based on the precedence of operators:<br>
+	<table>
+	<tr>
+	<td>
+	<img src="images/eval-expr.jpg" height="100%" />
+	</td>
+	<td>
+	</td>
+	</table>
+<br>
+	And for another example, take:<br>
+        4 * (3 + 2) / 2 + 5 <br>
+
+        In this example, the evaluation proceeds by taking the following steps:<br>
+        = 4 * (5) / 2 + 5  <br>
+        = 20 / 2 + 5 <br>
+        = 10 + 5 <br>
+        = 15 <br><br>
+
+        Here we see the paranthesis forced the evaluation for + before * even though * has higher precedence.
+        </p>
+</div>
+<div id="objective">
+	<h2> Objective </h2> 
+	<p>
+	1. To learn about different types of operators
+        <br>
+        2. To learn about the precedence of the operators
+        <br>
+        3. To learn how to evaluate an expression
+        <br>
+
+	</p> 
+</div>
+
+
+<div id="Lab">
+	<h2>Lab</h2>
+<h3>Manual</h3>
+<ol>
+<li> 1. Select the type of operators and the datatype you want to work upon from the top most bar. </li>
+<li> 2. You can edit the values of variables by pressing the edit button. </li>
+<li> 3. Select an expression prototype from the menu. </li>
+<li> 4. You can also edit this expression. </li>
+<li> 5. Press Start to start the experiment. </li>
+<li> 6. Press Next to see the step by step evaluation of the selected expression in the central panel and the corresponding reasoning in the right panel.</li>
+<li> 7. Press stop if you want to abort the experiment and start over.</li>
+</ol>   
+	<br>
+	<img src="images/exp1man.jpg" >
+	<br>
+	<a onclick="window.open('http://cvit.iiit.ac.in/trecvid08/keyframes/Vlab/Lab1/arithmatic/operator.php', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;" class="qtlink" href="http://cvit.iiit.ac.in/trecvid08/keyframes/Vlab/Lab1/arithmatic/operator.php">
+
+	Go to lab on Expression evaluation(Click here)
+	</a>
+</div>
+
+
+
+<div id="quizzes">
+	<h2>Quiz</h2>
+ 
+	<ol>
+                <li><b>1. Evaluate 2*3+5%3.</b></li> 
+                <ol> 
+                <li>a. 1</li>
+                <li>b. 7</li>
+                <li>c. 8</li>
+                <li>d. 2</li>
+                </ol>
+		<br>
+                <li><b>2. Evaluate (2*(3+5))%3.</b></li> 
+                <ol> 
+                <li>a. 1</li>
+                <li>b. 7</li>
+                <li>c. 8</li>
+                <li>d. 4</li>
+                </ol>
+		<br>
+                <li><b>3. The order of evaluation of the operators in (2*(3+5))%3 is:</b> </li> 
+                <ol> 
+                <li>a. +, *, %</li>
+                <li>b. *, +, %</li>
+                <li>c. %, *, +</li>
+                <li>d. +, %, *</li>
+                </ol>   
+		<br>
+                <li><b>4. The order of evaluation of the operators in 2*(3+5)%3 is: </b></li> 
+                <ol> 
+                <li>a. +, *, %</li>
+                <li>b. *, +, %</li>
+                <li>c. %, *, +</li>
+                <li>d. +, %, *</li>
+                </ol>
+    </ol>
+</div>
+
+<div id="readings"> 
+	<h2> further-readings </h2> 
+ <ol>
+ <li><a class="more" target="_blank" href="http://en.wikipedia.org/wiki/Expression_(programming)">http://en.wikipedia.org/wiki/Expression_(programming)</a></li>
+ <li><a class="more" target="_blank" href="http://www.exforsys.com/tutorials/c-language/c-expressions.html">http://www.exforsys.com/tutorials/c-language/c-expressions.html </a></li>
+    </ol>
+
+</div>
+

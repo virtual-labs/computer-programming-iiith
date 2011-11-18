@@ -1,0 +1,447 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<div id="experiment"> 
+
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+     
+      <img src="../images/logo.jpg" />
+    </div>
+
+    <div id="experiment-header-heading" class="heading">
+     
+      <a href="../index.html">Programming Lab</a>	
+    </div>
+
+    
+
+  </header>
+
+
+ 
+  <article id="experiment-article">
+  
+    
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+       
+    Expression Evaluation
+        
+      </header>
+
+    
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+        
+        </ul>
+      </nav>
+
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
+
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Introduction
+          </div>
+
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+          <div id="experiment-article-section-1-content" 
+          class="content">	
+            
+
+	<p> 
+Evaluating an expression is one of the most common tasks in programming. For example a+b+c is an expression. Here + is an operator. The variables  a, b and c are operands. The value of the expression is the sum of a, b and c. An expression may be often evaluated to assign a variable a new value or to verify the truthfulness of a test condition. For example the operator can be unary(Ex: ~,++ etc.), binary(Ex: +,* etc.) or ternary (Ex: (a&gt;b)?p:q)<br><br> 
+Examples of expressions:<br>      
+<ol> 
+<li>To compute the area of a triangle from base b and height h<br> 
+Area=1/2.0*base*height<br> 
+Note that this expression will be evaluated left to right, that is the division opeartor will be evaluated, followed by two multiplication operators. The 2.0 is used to make sure that the division is carried out as a floating point operation.</li><br> 
+<li>To compute the area of a triangle from the three sides, a, b and c<br> 
+s=(a+b+c)/2.0<br> 
+area = s*(s-a)*(s-b)*(s-c)<br> 
+	Here area is calculated in two steps. The first step, s is computed from the three sides a, b and c. Note that, the paranthesis is used so that evaluation within the paranthesis takes first. Without paranthesis, we would have obtained the value of s as sum of a, b and half of c. Similarly, paranthesis are very important in evaluating the second expression.</li><br> 
+<li>To find the nth term of an arithmetic progression, we can use the following expression<br> 
+	tn= a+(n-1)*d<br> 
+	where a is the first term and d is the common difference.<br> 
+	Here also, the use of paranthesis has helped us in evaluating the expression the way we need it.</li></ol><br> 
+ An expression used in a computer program is very similar to an algebraic expression and when many operators are specified in an expression, then the evaluation takes place according to the <i>precedence</i> of operators.The order of the precedence is given by a <a href="./table.html" target="_blank"><b>table of precedence</b></a>. <br>
+<br>
+A paranthesis can be used to override the precedence of operators and force the evalutation of a sub-expression within an expression. Expression is evaluated according to assosciativity of the operator. The assosciativity of the operator is a property that determines how operators of the same precedence are grouped in the absence of paranthesis. The objective in evaluating an expression is to consider the precedence and aasosciativity of the individual operators and compute the value of the sub-expressions. 
+ 
+	</p> 
+        </div>
+
+
+      </section>
+
+      <!-- Second section of the article-->
+      <section id="experiment-article-section-2">
+        
+        <div id="experiment-article-section-2-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/theory.jpg" />
+	</div>
+				
+        <!-- The heading for the section can be enclosed in a 
+        div tag. -->
+        <div id="experiment-article-section-2-heading" 
+        class="heading">
+          Theory
+        </div>
+       <div id="experiment-article-section-2-content" 
+        class="content">
+
+   <p> 
+   Evaluating an expression involves repeatedly solving the sub-expressions in the lowest level paranthesis and substituting its value to solve the bigger expression. If an expression or sub-expression does not have a paranthesis, then we can directly compute its value based on the precedence and assosciativity of the operators present in the expression. That is, the sub expression involving operator with higher precedence is evaluated before other sub-expressions. The following table gives the precedence order of all the operators:<br></p>
+ 
+<b><font color="#FF0000"><a href="./table.html" target="_blank"> Table of precedence (Click here)</a></font></b><br> 
+<p>
+Operators can be broadly categorized as:<br> 
+<ol> 
+<li>Arithmetic Operators: These operators are used for arithmetic operations like addition,subtraction and multiplication. Ex: DIVISION(/),MODULUS OR REMAINDER (%) </li> 
+<li>Relational Operators: These operators are typically used for comparison of two operands.Ex: GREATER THAN(&gt;),GREATER THAN OR EQUAL TO(&gt;=) etc.</li> 
+<li>Logical Operators: These operators are used for conducting logical operations like AND,OR. Ex: LOGICAL AND( &amp;&amp; ),LOGICAL OR (||) etc.</li> 
+<li>Bitwise Operators: These operators are used to perform operations on bits. Ex: BITWISE AND( &amp; ), BITWISE OR ( | ) etc.</li></ol><br><br> 
+</p> 
+
+
+        </div>
+      </section>
+
+
+      <section id="experiment-article-section-3">
+        
+        <div id="experiment-article-section-3-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab. -->
+	  <img src="../images/objective.jpg" />
+	</div>
+     
+        <div id="experiment-article-section-3-heading" 
+        class="heading">
+          Objective
+        </div>
+
+        <div id="experiment-article-section-3-content" 
+        class="content">
+
+	<p>
+        1. To learn about different types of operators
+        <br>
+        2. To learn about the precedence of the operators
+        <br>
+        3. To learn how to evaluate an expression
+        <br>
+
+        </p>
+
+        </div>
+
+      </section>
+
+
+      <section id="experiment-article-section-4">
+
+        <div id="experiment-article-section-4-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/simulation.jpg" />
+	</div>
+
+        <div id="experiment-article-section-4-heading" 
+        class="heading">
+          Experiment
+        </div>
+
+        <div id="experiment-article-section-4-content" 
+        class="content">
+ <p>
+      <a onclick="window.open('./arithmatic/operator.php', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;" class="qtlink" href="./arithmatic/operator.php">
+
+	Go to lab on Expression evaluation(Click here)
+	</a>
+         </p>
+
+        </div>
+
+      </section>
+
+      <section id="experiment-article-section-5">
+   
+        <div id="experiment-article-section-5-icon" 
+        class="icon">
+	  <!-- Enclose the icon image of your lab.-->
+	  <img src="../images/manual.jpg" />
+	</div>
+
+        <div id="experiment-article-section-5-heading" 
+        class="heading">
+          Manual
+        </div>
+
+        <div id="experiment-article-section-5-content" 
+        class="content">
+
+	<p> 
+<i>Here we shall see the step by step evaluation of mathematical expressions.</i> 
+	</p> 
+
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-6">
+      
+          <div id="experiment-article-section-6-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/quizzes.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-6-heading" 
+          class="heading">
+            Quizzes
+          </div>
+
+          <div id="experiment-article-section-6-content" 
+          class="content">
+            
+            <p>
+            <form name="quiz" action="quizresults.php" method="post" target="_blank" onsubmit="return window.confirm(&quot;You are submitting information to an external page. \nAre you sure?&quot;);"> 
+	<ol> 
+                <li><b>Evaluate 2*3+5%3.</b></li> 
+                <input type="radio" name="Q1" value="1">1<br> 
+                <input type="radio" name="Q1" value="2">7<br> 
+                <input type="radio" name="Q1" value="3">8<br> 
+                <input type="radio" name="Q1" value="4">2<br>                
+		<br> 
+                <li><b>Evaluate (2*(3+5))%3.</b></li> 
+                <input type="radio" name="Q2" value="1">1<br> 
+                <input type="radio" name="Q2" value="2">7<br> 
+                <input type="radio" name="Q2" value="3">8<br> 
+                <input type="radio" name="Q2" value="4">4<br> 
+		<br> 
+                <li><b>The order of evaluation of the operators in (2*(3+5))%3 is:</b> </li> 
+                <input type="radio" name="Q3" value="1">+, *, %<br> 
+                <input type="radio" name="Q3" value="2">*, +, %<br> 
+                <input type="radio" name="Q3" value="3">%, *, +<br> 
+                <input type="radio" name="Q3" value="4">+, %, *<br> 
+		<br> 
+                <li><b>The order of evaluation of the operators in 2*(3+5)%3 is: </b></li> 
+                <input type="radio" name="Q4" value="1">+, *, %<br> 
+                <input type="radio" name="Q4" value="2">*, +, %<br> 
+                <input type="radio" name="Q4" value="3">%, *, +<br> 
+                <input type="radio" name="Q4" value="4">+, %, *<br> 
+		<br> 
+<b>Assume x=8.8, y=3.5 and z= -5.2 and m=4 for the following questions</b><br><br> 
+<li><b>Calculate x%y</b></li> 
+		<input type="radio" name="Q5" value="1">1.8<br> 
+                <input type="radio" name="Q5" value="2">3.5<br> 
+                <input type="radio" name="Q5" value="3">0.8<br> 
+                <input type="radio" name="Q5" value="4">7<br> 
+		<br><li><b>Calculate x%m</b></li> 
+		<input type="radio" name="Q6" value="1">8<br> 
+                <input type="radio" name="Q6" value="2">4<br> 
+                <input type="radio" name="Q6" value="3">1.8<br> 
+                <input type="radio" name="Q6" value="4">0.8<br> 
+		<br><li><b>Calculate 7/m</b></li> 
+		<input type="radio" name="Q7" value="1">0<br> 
+                <input type="radio" name="Q7" value="2">1<br> 
+                <input type="radio" name="Q7" value="3">2<br> 
+                <input type="radio" name="Q7" value="4">3<br> 
+		<br> 
+<li><b>Calculate 2*x/(3*y)</b></li> 
+		<input type="radio" name="Q8" value="1">1.67<br> 
+                <input type="radio" name="Q8" value="2">2<br> 
+                <input type="radio" name="Q8" value="3">1<br> 
+                <input type="radio" name="Q8" value="4">1.5<br> 
+		<br><li><b>Calculate 2*x/3*y</b></li> 
+		<input type="radio" name="Q9" value="1">5.86<br> 
+                <input type="radio" name="Q9" value="2">20.51<br> 
+                <input type="radio" name="Q9" value="3">1.67<br> 
+                <input type="radio" name="Q9" value="4">1<br> 
+		<br> 
+<b>Assume a=5, b=0 and c=-2 for the following questions</b><br><br> 
+<li><b>Calculate (a |b )&gt;c</b></li> 
+		<input type="radio" name="Q10" value="1">0<br> 
+                <input type="radio" name="Q10" value="2">1<br> 
+                <input type="radio" name="Q10" value="3">5<br> 
+                <input type="radio" name="Q10" value="4">-2<br> 
+		<br> 
+<li><b>Calculate (a&amp;c)*b%2</b></li> 
+		<input type="radio" name="Q11" value="1">0<br> 
+                <input type="radio" name="Q11" value="2">2<br> 
+                <input type="radio" name="Q11" value="3">5<br> 
+                <input type="radio" name="Q11" value="4">1<br> 
+		<br> 
+<li><b>Calculate b++&gt;c</b></li> 
+		<input type="radio" name="Q12" value="1">0<br> 
+                <input type="radio" name="Q12" value="2">1<br> 
+                <input type="radio" name="Q12" value="3">-2<br> 
+                <input type="radio" name="Q12" value="4">-1<br> 
+<li><b>Calculate a&gt;((a-2==3)?1:0)</b></li> 
+		<input type="radio" name="Q13" value="1">0<br> 
+                <input type="radio" name="Q13" value="2">1<br> 
+                <input type="radio" name="Q13" value="3">2<br> 
+                <input type="radio" name="Q13" value="4">3<br> 
+		<br> 
+<b>Assume a='E' , b='5' and c='?' are  char type variables for the following questions</b><br><br> 
+<li><b>Calculate b-2</b></li> 
+		<input type="radio" name="Q14" value="1">'C'<br> 
+                <input type="radio" name="Q14" value="2">'A'<br> 
+                <input type="radio" name="Q14" value="3">'c'<br> 
+                <input type="radio" name="Q14" value="4">'a'<br> 
+		<br> 
+<li><b>Calculate b+c</b></li> 
+		<input type="radio" name="Q15" value="1">'t'<br> 
+                <input type="radio" name="Q15" value="2">'s'<br> 
+                <input type="radio" name="Q15" value="3">'T'<br> 
+                <input type="radio" name="Q15" value="4">'r'<br> 
+		<br> 
+<li><b>Calculate a%c</b></li> 
+		<input type="radio" name="Q16" value="1">0<br> 
+                <input type="radio" name="Q16" value="2">1<br> 
+                <input type="radio" name="Q16" value="3">6<br> 
+                <input type="radio" name="Q16" value="4">9<br> 
+		<br> 
+<li><b>Calculate a*3</b></li> 
+		<input type="radio" name="Q17" value="1">0<br> 
+                <input type="radio" name="Q17" value="2">1<br> 
+                <input type="radio" name="Q17" value="3">207<br> 
+                <input type="radio" name="Q17" value="4">69<br> 
+<br> 
+<li><b>Calculate a*&#39;3&#39;</b></li> 
+		<input type="radio" name="Q18" value="1">0<br> 
+                <input type="radio" name="Q18" value="2">1<br> 
+                <input type="radio" name="Q18" value="3">97<br> 
+                <input type="radio" name="Q18" value="4">3519<br> 
+		<br> 
+</ol> 
+ 
+<p> <input type="submit" value="Submit answers for evaluation" target="_blank"></p> 
+</form> 
+          </div>
+
+        </section>
+
+        <section id="experiment-article-section-7">
+	  
+          <div id="experiment-article-section-7-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab. -->
+	    <img src="../images/procedure.jpg" />
+	  </div>
+	
+          <div id="experiment-article-section-7-heading" 
+          class="heading">
+	    Procedure
+	  </div>
+	
+          <div id="experiment-article-section-7-content" 
+          class="content">
+	    <p>
+	      Procedure for the experiment is as follows.
+	    </p>
+		<p>
+<ol>
+<li>  Select the type of operators and the datatype you want to work upon from the top most bar. </li>
+<li>  You can edit the values of variables by pressing the edit button. </li>
+<li>  Select an expression prototype from the menu. </li>
+<li>  You can also edit this expression. </li>
+<li>  Press Start to start the experiment. </li>
+<li>  Press Next to see the step by step evaluation of the selected expression in the central panel and the corresponding reasoning in the right panel.</li>
+<li>  Press stop if you want to abort the experiment and start over.</li>
+</ol>
+		<p>
+
+	  </div>
+	
+        </section>
+			
+		
+        <section id="experiment-article-section-8">
+   
+          <div id="experiment-article-section-8-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab.-->
+	    <img src="../images/readings.jpg" />
+	  </div>
+
+          <div id="experiment-article-section-8-heading" 
+          class="heading">
+            Further Readings
+          </div>
+
+          <div id="experiment-article-section-8-content" 
+          class="content">
+  <p>	
+ <ol>
+ <li><a class="more" target="_blank" href="http://en.wikipedia.org/wiki/Expression_(programming)">http://en.wikipedia.org/wiki/Expression_(programming)</a></li><br>
+ <li><a class="more" target="_blank" href="http://www.exforsys.com/tutorials/c-language/c-expressions.html">http://www.exforsys.com/tutorials/c-language/c-expressions.html </a></li><br>
+<li><b>Chapter 2, The C Programming Language, Kernighan and Ritchie</b></li><br>
+<li><b>Chapter 3, Programming with C, Brian Gottfried</b></li>
+    </ol>
+</p>
+          </div>
+
+        </section>
+
+      </div>
+
+
+    <!-- An article can have a sidebar that contain related 
+    links and additional material (however it is kept optional 
+    at this moment) -->
+    <aside id="lab-article-sidebar" class="default">
+      <!-- put the content that you want to appear in the 
+      sidebar -->	
+    </aside>
+
+
+    <!-- Article footer can display related content and 
+    additional links -->						
+    <footer id="lab-article-footer" class="default">
+      <!-- Put the content that you want to appear here -->
+    </footer>
+
+  </article>
+
+
+  <!-- Links to other labs, about us page can be kept the lab 
+  footer-->
+  <footer id="lab-footer" class="default">
+    <!-- Put the content here-->
+  </footer>
+
+</div>		
+
+</body>
+</html>

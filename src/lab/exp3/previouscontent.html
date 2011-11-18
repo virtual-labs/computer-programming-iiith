@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<head></head>
+<h1 id="main-title">
+Advanced Control Flow(Loops)
+</h1>
+
+<div id="introduction">
+	<h2>Introduction </h2>
+	<p>
+
+ A program can be thought of as a sequence of instructions which are followed by a computer to solve a problem. The sequence in which these instructions are executed can be different from the sequence in which they are specified. Control flow (or alternatively, flow of control) refers to the order in which the individual statements or instructions of a program are executed or evaluated. This changing of the order of execution of instructions can be unconditional or conditional. The former case clearly specifies form while line the execution should be resumed. The latter case, this decision about form which line the exection should be resumed is made based on the value of an expression. Hence, it can be used to implement "decision-making" which means selection of one alternative amongst several others according to given conditions. An example of "decision-making" in the real world could be: "If the traffic light is green, keep moving; if it is red, then stop". In the case of programmming, "decision-making" essentially means deciding from which statement the execution should be resumed. <br>
+Some constructs allow skipping a set of instructions if a condition is false, whereas, some others execution of only one set of statements based on the truthfulness of a condition. These constructs can be placed inside another to create more complex flow of control. This enclosing of structures into one another is called nesting. A switching construct allows decision-making based on the state of a variable or an expression. Its purpose is to allow the value of a variable or an expression to control the flow of program execution via a multiway branch. These constructs are known as conditionals because they alter the flow of control based on a condition. <br><br>
+Programming languages also allow direct continuation of execution of a statement at a different location using unconditional branch or jump statements for which no condition is required to be evaluated. These can even be used to stop the execution of the program. <br><br>
+Apart from this, there is another class of constructs called loops, which can be used to repeat a set of instructions. This repetition can be done a fixed number of times or until some specific condition is met. Just like the conditionals, the loops can also be nested. Loops and conditionals can also be nested inside each other. <br><br>
+In this lab, we shall see the working of looping constructs.
+
+	</p> 
+</div>
+<div id="theory">
+        <h2>Theory</h2>
+        <p>
+
+In order to understand the working of looping constructs, it is important to understand the term block. A group of code statements that are associated and intended to be executed as a unit is referred to as a block. In C, the beginning of a block of code is denoted by writing a set of statements with in curly braces. It is not necessary to place a semicolon after the end of a block. Blocks can be left empty. A block and can be written inside another block of statements, in such a case the former block is said to be nesting inside the other block. <br>
+A loop is a construct that instructs the computer to repeatedly execute a certain block of code until a certain condition is met or for a certain fixed number of times. Every such repetition is called an iteration. Break statement can be used to exit a looping construct and a Continue statement can used to start another iteration at any point. A looping construct typically has three sections:<br>
+<br>
+<ol>
+<li> An Initialization part where variables are initialized before looping is started. These are executed only once.</li>
+<li> A Test expression which determines when to exit the looping construct.</li>
+<li> An update section where variables are updated before the next iteration of the loop.</li>
+</ol>
+The following are the most commonly used looping constructs used in C programming:<br><br>
+
+<big>For loop</big>
+<br>
+In a for loop, the initialization, test expression and update expressions sections are written together in a single line :
+<code><pre>
+for(initialization; test expression; update statements) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;statements1;
+}
+</pre></code>
+This improves the readability of the construct. The initialization expression is executed only once and is immediately followed by checking of the <i>test expression</i>. Hence, it is an entry controlled loop. If the <i>test expression</i> is false, then the construct is exited.  So, it is possible that the <i>statements1</i> may not get executed even once. If the test expression is true then <i>statements1</i> are executed and it is followed by the execution of the <i>update statements</i>. Now, the <i>test expression</i> is evaluted again to check whether the loop should be exited. If not, the whole process is repeated, starting from the execution of <i>statements1</i>.
+<br>
+
+The sequence of execution of statements is:
+
+<ol>
+<li>Initialization</li>
+<li>Test Expression</li>
+<li>Block Statements</li>
+<li>Update statements</li>
+<li>Test Expression</li>
+<li>...</li>
+</ol>
+
+Everytime when the test expression is evaluated, if it becomes false, then the loop is exited. This image shows the steps taken for this.<br>
+<img src="images/flowchart_for.jpg" width=100 height=640>
+
+<br>
+<br>
+
+<big>While loop</big>
+<br>
+While loop is another entry controlled loop. It works in a similar way as a for loop the only difference is that the <i>initialization</i> statements, test expression and the update statements are not written together. In fact, the update statements are written along with the block statements. The looping is terminated only when the <i>test expression</i> becomes false.
+<br>
+<code><pre>
+<i>initialization;</i>
+while(<i>test expression</i>){
+        statements1;
+        update statements;
+}
+</pre></code>
+<br>
+The sequence of execution of statements is:
+<ol>
+<li>Initialization</li>
+<li>Test Expression</li>
+<li>Block Statements</li>
+<li>Update statements</li>
+<li>Test Expression</li>
+<li>...</li>
+</ol>
+Everytime when the test expression is evaluated, if it becomes false, then the loop is exited. <br>
+<br>
+<br>
+
+<big>Do-while loop</big>
+<br>
+The the block statements in the for and while loops may not get executed at all because the test condition is checked before the execution. The Do-while loops ensure that the block statements are executed at least once, because in this the test expression is checked after doing one execution of the loop body. As usual the update statements come before the test condition loop. The following is the syntax of Do-while loops:
+<br>
+<code><pre>
+do{
+        statements1;
+        update statements;
+}while(<i>test expression</i>);
+</code></pre>
+<br>
+The sequence of execution of statements is:
+<ol>
+<li>Initialization</li>
+<li>Block Statements</li>
+<li>Update statements</li>
+<li>Test Expression</li>
+<li>Block Statements</li>
+<li>Update statements</li>
+<li>Test Expression</li>
+<li>...</li>
+</ol>
+Everytime when the test expression is evaluated, if it becomes false, then the loop is exited. <br>
+</pre></code>
+
+
+<br>
+<br>
+
+<big>Important:</big>
+<br>
+<ol>
+<li> 1. Any loop can be exited at anytime by using a break  statement.</li>
+<li> 2. Next iteration of the loop can be started at anypoint by using the continue statement.</li>
+</ol>
+
+       
+ </p>
+</div>
+
+
+
+<div id="objective">
+	<h2> Objective </h2> 
+	<p>
+	  1. To learn how decision making is done while programming.
+        <br>
+        2. To learn about the various advanced constructs used for control flow in order to achieve repetition of instructions.
+        <br>
+         <br><br>
+
+	</p> 
+</div>
+
+
+<div id="Lab">
+	<h2>Lab</h2>
+<h3>Manual</h3>
+       <pre>
+1. Choose experiment type by pressing the "Switch experiment"
+button on the bottom left.
+
+<b>Experiment 1:</b><br>
+<i>Here we shall see how various looping constructs can be used to find the factorial of a positive integer.</i><br>
+2. Select the looping construct with which you want to solve the problem.
+3. Enter the number for which factorial has to be calculated and 
+press OK.
+4. Press Start to start the experiment. At any time the experiment
+can be restarted by pressing reset.
+5. Click Next to get a step by step execution of the code along
+with comments which are displayed at the bottom.
+<img src="images/vlab3_a.jpg">
+<br>
+<b>Experiment 2:</b><br>
+
+<i>Here we shall see how nesting of loops can be done to create a pattern of any size that looks like a pyramid.</i><br>
+2. Enter the height of pyramid and press OK.
+3.Press Start to start the experiment. At any time the experiment
+can be restarted by pressing reset.
+4. Click Next to get a step by step execution of the code along
+with comments which are displayed at the bottom.
+<img src="images/vlab3_b.jpg">
+        </pre>
+	
+<br>
+<br>
+ <a onclick="window.open('http://cvit.iiit.ac.in/trecvid08/keyframes/Vlab/Lab3/loops.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;" class="qtlink" href="http://cvit.iiit.ac.in/trecvid08/keyframes/Vlab/Lab3/loops.html">
+Go to Lab on Advanced Control Flow(click here)
+</a>
+</div>
+
+
+
+<div id="quizzes">
+	<h2>Quiz</h2>
+        <ol>
+<br>
+                <li><b>1. Which of the following is an exit controlled loop?</b></li>
+                <ol>
+                <li>a. for</li>
+                <li>b. while</li>
+                <li>c. do-while</li>
+                <li>d. none of the above</li>
+                </ol>
+<br>
+                <li><b>2. Which of the following loops gets executes atleast once?</b></li>
+                <ol>
+                <li>a. for</li>
+                <li>b. while</li>
+                <li>c. do-while</li>
+                <li>d. none of the above</li>
+                </ol>
+<br>
+                <li><b>3. What does the continue statement do?</b></li>
+                <ol>
+                <li>a. Exit a loop</li>
+                <li>b. Continue to the next iteration</li>
+                <li>c. Resume execution from the initialization statement</li>
+                <li>d. Exit to shell</li>
+                </ol>
+<br>
+                <li><b>4. Which among the following is an unconditional control structure?</b></li>
+                <ol>
+                <li>a. do-while</li>
+                <li>b. if-else</li>
+                <li>c. goto</li>
+                <li>d. for</li>
+                </ol>
+
+    </ol>
+
+</div>
+
+<div id="readings"> 
+	<h2> further-readings </h2> 
+   <ol>
+ <li><a class="more" target="_blank" href="http://en.wikibooks.org/wiki/C_Programming/Control">http://en.wikibooks.org/wiki/C_Programming/Control</a></li>
+ <li><a class="more" target="_blank" href="http://en.wikipedia.org/wiki/Control_flow">http://en.wikipedia.org/wiki/Control_flow</a></li>
+ <li><a class="more" target="_blank" href="http://www.exforsys.com/tutorials/c-language/decision-making-looping-in-c.html">http://www.exforsys.com/tutorials/c-language/decision-making-looping-in-c.html</a></li>
+    </ol>
+
+
+</div>
+

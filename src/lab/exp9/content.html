@@ -22,7 +22,7 @@ edit -->
 
     <div id="experiment-header-heading" class="heading">
      
-      <a href="../index.html">Programming Lab</a>	
+      <a href="../index.html">Problem Solving Lab</a>	
     </div>
 
     
@@ -39,7 +39,7 @@ edit -->
     
       <header id="experiment-article-heading" class="heading">
        
-     Numerical Approximation
+     HEADING
         
       </header>
 
@@ -75,9 +75,7 @@ edit -->
           <div id="experiment-article-section-1-content" 
           class="content">	
             
-<p>
-For many mathematical problems, such as finding area under a curve, it may not be possible to find an exact formula. But still these can be computed to arbitrary precision by using appoximate methods. In this lab you will learn how to code these approximation methods to solve these problems using a computer.  
-</p>
+
 
         </div>
 
@@ -101,24 +99,7 @@ For many mathematical problems, such as finding area under a curve, it may not b
         </div>
        <div id="experiment-article-section-2-content" 
         class="content">
-<p>
-The problem finding area under a curve means calculating the area between a give curve and the x-axis( the line y=0), between two limits, say x=a and x=b. As you can remember from you high school mathematics, this problem is easily solvable by finding the integral of the function and plugging the values of the limits in the intergral. The difference of the limits gives the area under then curve. But there are some mathematical functions which are not integrable. Also, this method is applicable for only smooth functions. Can something be done to find the area under the curves which are not well behaved?
-</p>
-<p>
-It turns out that people were able to "approximate" the solution to this problem to any reasonable arbitrary degree, for any arbitrary curve much before integration was discovered. As we all know that rectangle is the easiest of geometrical figures to find the area of, so the task of finding the area under a curve was expressed as a problem of finding the area of vertical rectangular strips. The boundary limits is divided into some x equal intervals of length(l) equal to l=(b-a)/n. Now, the area falling under each of these strips is approximated using an rectangle whose width is equal to the width of interval and height is equal to the value of the function at the beginning of the interval. A variation of this algorithm takes the value of the function at the middle of the interval. Now, the area under the curve is just the sum of areas of the individual strips. 
 
-</p>
-<br>
-<img src="images/arch.gif" width="279px" height="185px">
-<br>
-<p>
-It is easy to see that the result of this approximation would get better and better as the legnth of the interval is decreased. If they are made infinitesimally small, then we can get the exact area under the curve. But this is not possible using a computer where you can only specify numbers to a certain degree of precision. Still it is possible to approximate the area under the curve to a reasonable degree for practical purposes using a computer. 
-</p>
-
-
-<pre  class="prettyprint lang-c">
-
-</pre>
 
 
 
@@ -142,13 +123,10 @@ It is easy to see that the result of this approximation would get better and bet
         <div id="experiment-article-section-3-content" 
         class="content">
 
-	
-	<p>
-	<ol>
-	<li>  To understand that for some problems an approximate numerial solution is as good as the exact solution for practical purposes. </li>
-	<li>  To understand how to apply these solutions to obtain arbitrary precision. </li>
-	</ol>
-	</p> 
+        <p>
+	To learn to solve problems related to Numerical Representation using Computer Programming.
+	</p>
+
 
         </div>
 
@@ -170,11 +148,9 @@ It is easy to see that the result of this approximation would get better and bet
 
         <div id="experiment-article-section-4-content" 
         class="content">
- 	<p>
-	<a onclick="window.open('./Integration/build/factorial.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;" class="qtlink" href="./Integration/build/factorial.html">
-	Go to lab on Calculating Definite Integration(Click here)
-	</a>
-        </p>
+ <p>
+        <a href="lab.html" target="_blank">Go to Lab (Click here)</a>
+         </p>
 
         </div>
 
@@ -221,41 +197,48 @@ It is easy to see that the result of this approximation would get better and bet
           class="content">
             
             <p>
-         <form name="quiz" action="quizresults.php" method="post" target="_blank" onsubmit="return window.confirm(&quot;You are submitting information to an external page. \nAre you sure?&quot;);">
-	 <ol>
-                <li><b> For the function y=6, the value of area under the curve using the approximation method would be completely accurate.</b></li>
-                <input type="radio" name="Q1" value="1">a. True<br>
-                <input type="radio" name="Q1" value="2">b. False<br>
-                <br>
-                <li><b> Decreasing the length of the interval will imporve tha accuracy of the approximation. </b></li>
-                <input type="radio" name="Q2" value="1">a. True<br>
-                <input type="radio" name="Q2" value="2">b. False<br>
-                <br>
-
-
-                <li><b>Increasing the value of the variable width will : </b> </li>
-		<pre class="prettyprint lang-c">
-main(){
-	int a , b , width , i;
-	double sum ;
-	scanf("%d%d", &a , &b );
-	sum = 0 ; width = 1 ; i = 0;
-	for ( i = a ; b >= i ; i += width){
-		sum = sum + cos(2*Pi/13*x) * width;
-	}
-	printf("Integration value = %d", sum);
-}
-		</pre>
-                <input type="radio" name="Q3" value="1">a. Improve the approximation<br>
-                <input type="radio" name="Q3" value="2">b. Will not have any affect<br>
-                <input type="radio" name="Q3" value="3">c. Make the approximation worse<br>
-                <input type="radio" name="Q3" value="4">d. May improve or make worse depending on the interval<br>
-
-		<br>
-		<li><b> An approximate solution may be as good as the accurate solution for <input type="text" name="fib1"> purposes.</b></li><br><br>
-	</ol>
-<p> <input type="submit" value="Submit answers for evaluation" target="_blank"></p>
-</form>
+              
+              <b>Q1.</b> 
+              Time taken for one complete oscillation 
+              is called Time Period of the oscillator. <br> 
+              <input type="radio" name="q1" id="q1" value="1"> 
+                <font color="green"> True </font> <br> 
+              <input type="radio" name="q1" id="q1" value="0">
+                <font color="red"> False </font> <br/><br/> 
+              
+              <b>Q2.</b> 
+              Time period of the oscillator is constant for 
+              given values of mass, length and initial 
+              conditions.<br> 
+              <input type="radio" name="q2" id="q2" value="1"> 
+                <font color="green"> True </font> <br> 
+              <input type="radio" name="q2" id="q2"value="0">
+                <font color="red"> False </font> <br/><br/> 
+              
+              <b>Q3.</b> 
+              Value of Time period depends on initial 
+              conditions. <br> 
+              <input type="radio" name="q3" id="q3" value="1"> 
+                <font color="green"> True </font> <br> 
+              <input type="radio" name="q3" id="q3"value="0">
+                <font color="red"> False </font> <br/><br/> 
+              
+              <b>Q4.</b> 
+              Value of time period depends on mass. <br> 
+              <input type="radio" name="q4" id="q4" value="1"> 
+                <font color="green"> True </font> <br> 
+              <input type="radio" name="q4" id="q4" value="0">
+                <font color="red"> False </font> <br/><br/> 
+              
+              <b>Q5.</b> 
+              Value of time period depends on length of the 
+              oscillator. <br> 
+              <input type="radio" name="q5" id="q5" value="1"> 
+                <font color="green"> True </font> <br> 
+              <input type="radio" name="q5" id="q5"value="0">
+                <font color="red"> False </font> <br/><br/> 
+              <input type="submit" value="Submit Answers" 
+                class="button" />
             </p>
 
           </div>
@@ -311,12 +294,23 @@ main(){
 
           <div id="experiment-article-section-8-content" 
           class="content">
-         <ol>
-
-<li><a href="http://en.wikipedia.org/wiki/Numerical_integration"> http://en.wikipedia.org/wiki/Numerical_integration </a></li>
-<li><a href="http://en.wikipedia.org/wiki/Numerical_analysis"> http://en.wikipedia.org/wiki/Numerical_analysis </a></li>
-</ol>
-
+            <ul>	
+              <li>
+                <a href="http://en.wikipedia.org/wiki/
+                Simple_harmonic_motion">http://en.wikipedia.org/wiki/Simple_harmonic_motion</a>
+              </li>
+              <li>
+                <a href="http://www.physics.uoguelph.ca/
+                tutorials/shm/Q.shm.html">http://www.physics.uoguelph.ca/tutorials/shm/Q.shm.html</a>
+              </li> 
+              <li>
+                Dynamics of structures by Anil K chopra. 
+              </li> 
+              <li>
+                <a href="http://surendranath.tripod.com/Applets/
+                Oscillations/SHM/SHMApplet.html">http://surendranath.tripod.com/Applets/Oscillations/SHM/SHMApplet.html</a> 
+              </li>
+            </ul>
           </div>
 
         </section>
