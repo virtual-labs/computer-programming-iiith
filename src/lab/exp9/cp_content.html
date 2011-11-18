@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<head></head>
+<h1 id="main-title">
+Pointers
+</h1>
+
+<div id="introduction">
+<h2>Introduction </h2>
+<p>
+Every time a variable is declared, some bytes are allocated to that variable depending on its datatype. For example, int takes 4 bytes, a char takes only one byte. Arrays allow allocation of even larger number of storage space or "bytes". Each of these bytes has a distinct address in the main memory. Pointer is a datatype which can store this address. Hence a pointer can serve as a "reference" to the data contained other variables. This has some useful applications, most importantly, allowing users to modify data from within a function without needing to make a copy of the data, and also allowing the user to make "linked" data structures.
+
+</p>
+</div>
+<div id="theory">
+
+<h2>Theory</h2>
+A pointer is a programming language data type which can store memory addresses of other variables. A pointer variable corresponding to any data type can be declared by using * before the name of the pointer.
+<pre  class="prettyprint lang-c">
+int *pointer1_1,*pointer2_i, var_i=5;
+</pre>
+This would declare 2 integer pointers meant to store references(memory address) to variables of integer data type. Note that var_i is just a normal integer variable. Alternatively, pointers can also be declared as:
+<pre  class="prettyprint lang-c">
+int* pointer1_1,pointer2_i;
+int var_i=5;
+</pre>
+The & operator can be used with any integer variable to get its memory address. So, writing
+
+<pre  class="prettyprint lang-c">
+pointer1_i=&var_i;
+</pre>
+
+would assign the memory address of var_i to pointer1_i. 
+<table border=0 ><tr><td><img src="pointers.png" title="Figure explaining the working of pointers."><caption align="Bottom" ><h4>Figure explaining the working of pointers.</h4></caption></td></tr></table>
+<br>
+The * operator is used to access the values stored at a given address. So, writing
+
+<pre  class="prettyprint lang-c">
+printf("%d\n",*pointer1_i);
+</pre>
+would print 5 on the console. This process of accessing the value stored at a given position is known as dereferencing a pointer. Similarly, to store references to character or float variables one can define char or float type pointers. Arithmatical operations like addition and subtraction can be performed to a pointer. The nature of these arithmatic operations is what distinguishes and integer pointer from, say, a character pointer, which otherwise just store memory addresses. Adding one to a interger pointer makes to point to the next integer and hence it skips 4 bytes. Adding one to character pointer makes it to point to the next character and hence it skips only 1 byte. 
+</p>
+<p>
+A pointer can be used to allocate memory in the runtime using the malloc() function, defined in stdlib.h, by doing dynamic memory allocation. Writing 
+<pre  class="prettyprint lang-c">
+int *ptr=(int *)malloc(20*(sizeof(int));
+</pre>
+will allocate a space 20 integer variables and store the address of the first byte in ptr. An array, infact, is just a constant pointer to which allocation is done automatically. Hence, writing
+<pre  class="prettyprint lang-c">
+int arr[100];
+</pre>
+is equivalent to writing
+<pre  class="prettyprint lang-c">
+const int* arr=(int *)malloc(100*sizeof(int));
+</pre>
+
+</div>
+
+<div id="objective">
+	<h2> Objective </h2> 
+	<p>
+	<ol>
+	<li>  To understand the concept of memory adddress associated with every variable.  </li>
+	<li>  To understand pointer referencing and dereferencing. </li>
+	<li>  To understand how pointers are useful in dynamic allocation of memory. </li>
+	</ol>
+	</p> 
+</div>
+
+
+<div id="Lab">
+	<h2>Lab</h2>
+
+<h3>Manual</h3>
+
+<b>Calculating Factorial using a recursive procedure</b>
+<ol>
+<li>  Press start to start the experiment and select a value of N. </li>
+<li>  Press next to see the execution of the code </li>
+<li>  Relavant line in the code is shown here </li>
+<li>  The output of the code is shown in the right </li>
+</ol>
+        <br>
+        <img src="fact.jpg" >
+        <br>
+	<a onclick="window.open('http://cvit.iiit.ac.in/trecvid/keyframes/Vlab/rec_lab/test/build/factorial.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;" class="qtlink" href="http://cvit.iiit.ac.in/trecvid/keyframes/Vlab/rec_lab/test/build/factorial.html">
+
+	Go to lab on Calculating factorial(Click here)
+</a>
+<br>
+<b>Towers of hanoi</b>
+<ol>
+<li>   Press start to start the experiment. </li>
+<li>   Select the value of N. </li>
+<li>   Press next to see the execution of the code </li>
+<li>   The output of the code is shown in the right </li>
+<li>   You can stop the code using stop button </li>
+
+</ol>   
+        <br>
+        <img src="recursion_lab.jpg" >
+        <br>
+
+	<a onclick="window.open('./test1/build/towers.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;" class="qtlink" href="./test1/build/towers.html">
+
+	Go to lab on Recursion(Click here)
+	</a>
+</div>
+
+
+
+<div id="quizzes">
+	<h2>Quiz</h2>
+ <form name="quiz" action="quizresults.php" method="post" target="_blank" onsubmit="return window.confirm(&quot;You are submitting information to an external page. \nAre you sure?&quot;);">
+	 <ol>
+                <li><b>How many stars will the following code output for a given positive value of n: </b></li>
+		
+		<pre class="prettyprint lang-c">
+		void fun1(int n)
+		{
+		   int i = 0;
+		   if (n > 1)
+		     fun1(n-1);
+		   for (i = 0; i < n; i++)
+		     printf(" * ");
+		}
+		</pre>
+		<input type="radio" name="Q1" value="1">a. n<br>
+                <input type="radio" name="Q1" value="2">b. n^2<br>
+                <input type="radio" name="Q1" value="3">c. n(n-1)/2<br>
+                <input type="radio" name="Q1" value="4">d. n(n+1)/2<br>
+                <br>
+
+                <li><b>For every recursive solution, there is a corresponding iterative solution</b></li>
+                <input type="radio" name="Q2" value="1">a. True<br>
+                <input type="radio" name="Q2" value="2">b. False<br>
+                <br>
+                <li><b>What will be the ouptut of the following function call: fun2(20); where fun2 is defined as: </b> </li>
+		
+		<pre class="prettyprint lang-c">
+		void fun2(int n)
+		{
+		  if(n > 100)
+		    return;
+		  printf("%d ", n);
+		  fun2(2*n);
+		  printf("%d ", n);
+		}
+		</pre>
+                <input type="radio" name="Q3" value="1">a. 20 40 60 80 60 40 20<br>
+                <input type="radio" name="Q3" value="2">b. 80 60 40 20<br>
+                <input type="radio" name="Q3" value="3">c. 20 40 60 80 80 60 40 20<br>
+                <input type="radio" name="Q3" value="4">d. 20 40 60 80<br>
+                <br>
+                <li><b>What will be the ouptut of the following function call: fun3(100); where fun3 is defined as: </b> </li>
+		
+		<pre class="prettyprint lang-c">
+		int fun3(int n)
+		{
+		  if(n == 1)
+		     return 0;
+		  else
+		     return 1 + fun1(n/2);
+		}
+		</pre>
+                <input type="radio" name="Q4" value="1">a. 6<br>
+                <input type="radio" name="Q4" value="2">b. 7<br>
+                <input type="radio" name="Q4" value="3">c. 5<br>
+                <input type="radio" name="Q4" value="4">d. 4<br>
+		<br>
+
+                <li><b>What will be the ouptut of the following function call: fun4(4,3); where fun4 is defined as: </b> </li>
+		<pre class="prettyprint lang-c">
+		int fun4(int x, int y)
+		{
+		  if(x == 0)
+		    return y;
+		  else
+		    return fun1(x - 1,  x + y);
+		}
+		</pre>
+                <input type="radio" name="Q5" value="1">a. 13<br>
+                <input type="radio" name="Q5" value="2">b. 14<br>
+                <input type="radio" name="Q5" value="3">c. 3<br>
+                <input type="radio" name="Q5" value="4">d. 7<br>
+
+		<br>
+		<li><b>A recursive function must necessarily make a call to <form><input type="text" name="fib1"> </form>.</b></li><br><br>
+		<li><b>A <form><input type="text" name="fib2"> </form>  is required so that there is no infinite recursive calling of the same function.</b></li><br><br>
+	</ol>
+<p> <input type="submit" value="Submit answers for evaluation" target="_blank"></p>
+</form>
+</div>
+
+<div id="readings"> 
+	<h2> further-readings </h2> 
+<ol>
+
+<li><a href="http://www.exforsys.com/tutorials/c-language/c-pointers.html"> http://www.exforsys.com/tutorials/c-language/c-pointers.html </a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pointer_%28computer_science%29"> http://en.wikipedia.org/wiki/Pointer_(computer_science) </a></li>
+</ol>
+
+</div>
+
