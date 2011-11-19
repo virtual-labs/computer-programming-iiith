@@ -22,7 +22,7 @@ edit -->
 
     <div id="experiment-header-heading" class="heading">
      
-      <a href="../index.html">Programming Lab</a>	
+      <a href="../index.html">Problem Solving Lab</a>	
     </div>
 
     
@@ -39,7 +39,7 @@ edit -->
     
       <header id="experiment-article-heading" class="heading">
        
-     Array
+     Function
         
       </header>
 
@@ -75,13 +75,13 @@ edit -->
           <div id="experiment-article-section-1-content" 
           class="content">	
             
-<p>
+	<p>
 	Writing large programs effectively requires decomposition of the code into several independent modules. This makes the program easier to maintain and edit. This is done by taking the problem and breaking it into small, managable pieces. A function is a portion of code within a larger program that performs a specific task and is relatively independent of the remaining code. This helps in decomposition of the code into smaller independent modules. The task performed by a function can be summarised as taking as input a set of variables and returning a value after doing computation with these values. The value of the input variables may also be updated during the computation. Since the functions are written independent of the main code, the same function can be called from the main program with different input variables. The allows reuse of the code and hence shortening of the code.
 	</p>
 	<p>
 	An example of a function, say you are making a program that calculates sales tax and returns the total payable amount. The function would ask for a subtotal(s_total) and the tax percentage(p) as arguments, then take that s_total and multiply it by p/100  to calculate the sales tax(s_tax). After this, the function would calculate the total payable amount by adding sales tax(s_tax) and sub total(s_total) and return it to the main program. This function can be called many times from the main program for different customers by proving thier sub total and sales tax to be applied.
 	</p> 
-
+</div>
 
 
         </div>
@@ -107,8 +107,7 @@ edit -->
        <div id="experiment-article-section-2-content" 
         class="content">
 
-
-<p>
+    <p>
 	Function basically is a independent piece of code which takes some variables as input and returns a result. The function may optionally update the values of the input variables. Writing a function involves clearly specifying the characteristics of the funciton in its prototype. The prototype of a function looks like:<br>
 <br>
 	<pre class="prettyprint lang-c">
@@ -146,6 +145,18 @@ edit -->
 	}
 	function definitions;
 	</pre>
+</div>
+
+
+<div id="objective">
+	<h2> Objective </h2> 
+	<p>
+	<ol>
+	<li> To understand that a big program can be broken up into independent modules </li>
+	<li> To learn to define functions and call them with appropriate parameters </li>
+	</ol>
+	</p> 
+
 
         </div>
       </section>
@@ -168,7 +179,10 @@ edit -->
         class="content">
 
         <p>
-	To learn to solve problems related to Numerical Representation using Computer Programming.
+	<ol>
+	<li> To understand that a big program can be broken up into independent modules </li>
+	<li> To learn to define functions and call them with appropriate parameters </li>
+	</ol>
 	</p>
 
 
@@ -193,7 +207,9 @@ edit -->
         <div id="experiment-article-section-4-content" 
         class="content">
  <p>
-        <a href="lab.html" target="_blank">Go to Lab (Click here)</a>
+        <a onclick="window.open('./lab/function.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;" class="qtlink" href="./lab/function.html">
+	Go to lab on Functions(Click here)
+	</a>
          </p>
 
         </div>
@@ -217,7 +233,7 @@ edit -->
         class="content">
 
 	<p> 
-	For each problem you have to write a program in C or C++. Each question is evaluted on test cases. An answer is correct only when all the test cases are cleared. 
+	In this experiment you will learn how to write functions and how to call them with proper arguments. 
 	</p> 
 
           </div>
@@ -240,50 +256,62 @@ edit -->
           <div id="experiment-article-section-6-content" 
           class="content">
             
-            <p>
-              
-              <b>Q1.</b> 
-              Time taken for one complete oscillation 
-              is called Time Period of the oscillator. <br> 
-              <input type="radio" name="q1" id="q1" value="1"> 
-                <font color="green"> True </font> <br> 
-              <input type="radio" name="q1" id="q1" value="0">
-                <font color="red"> False </font> <br/><br/> 
-              
-              <b>Q2.</b> 
-              Time period of the oscillator is constant for 
-              given values of mass, length and initial 
-              conditions.<br> 
-              <input type="radio" name="q2" id="q2" value="1"> 
-                <font color="green"> True </font> <br> 
-              <input type="radio" name="q2" id="q2"value="0">
-                <font color="red"> False </font> <br/><br/> 
-              
-              <b>Q3.</b> 
-              Value of Time period depends on initial 
-              conditions. <br> 
-              <input type="radio" name="q3" id="q3" value="1"> 
-                <font color="green"> True </font> <br> 
-              <input type="radio" name="q3" id="q3"value="0">
-                <font color="red"> False </font> <br/><br/> 
-              
-              <b>Q4.</b> 
-              Value of time period depends on mass. <br> 
-              <input type="radio" name="q4" id="q4" value="1"> 
-                <font color="green"> True </font> <br> 
-              <input type="radio" name="q4" id="q4" value="0">
-                <font color="red"> False </font> <br/><br/> 
-              
-              <b>Q5.</b> 
-              Value of time period depends on length of the 
-              oscillator. <br> 
-              <input type="radio" name="q5" id="q5" value="1"> 
-                <font color="green"> True </font> <br> 
-              <input type="radio" name="q5" id="q5"value="0">
-                <font color="red"> False </font> <br/><br/> 
-              <input type="submit" value="Submit Answers" 
-                class="button" />
-            </p>
+      <form name="quiz" action="quizresults.php" method="post" target="_blank" onsubmit="return window.confirm(&quot;You are submitting information to an external page. \nAre you sure?&quot;);">
+<ol>
+                <li><b>Function prototype is required in every program</b></li>
+                <input type="radio" name="Q1" value="1">a. True<br>
+                <input type="radio" name="Q1" value="2">b. False<br>
+                <br>
+                <li><b>Functions can return more than one value at a time</b></li>
+                <input type="radio" name="Q2" value="1">a. True<br>
+                <input type="radio" name="Q2" value="2">b. False<br>
+                <br>
+		<li><b> What is the default return value of a function?</b></li>
+                <input type="radio" name="Q3" value="1">a. int<br>
+                <input type="radio" name="Q3" value="2">b. Void<br>
+                <input type="radio" name="Q3" value="3">c. No default return type<br>
+                <input type="radio" name="Q3" value="4">d. Boolean<br>
+		<br>
+		<li><b>Which of the following is an invalid function prototype?</b></li>
+                <input type="radio" name="Q4" value="1">a. float fun(int aa, int bb); <br>
+                <input type="radio" name="Q4" value="2">b. float fun(int aa, int );<br>
+                <input type="radio" name="Q4" value="3">c. float fun(float , int );<br>
+                <input type="radio" name="Q4" value="4">d. float fun(int aa, bb);<br>
+		<br>
+		<li><b>What is the return type of the function with prototype: "int func(char x, float v, double t);"</b></li>
+                <input type="radio" name="Q5" value="1">a. char <br>
+                <input type="radio" name="Q5" value="2">b. int <br>
+                <input type="radio" name="Q5" value="3">c. float <br>
+                <input type="radio" name="Q5" value="4">d. double <br>
+                <br>
+		<li><b> What is printed when this program is executed</b></li>
+		<pre class="prettyprint lang-c">
+		int f(int );
+		main()
+		{
+		printf ("%d\n",f(7)); 
+		}
+		f(int x)
+		{
+
+		if ( x&lt= 4)
+		return x;
+
+		return f(--x);
+		}
+		</pre>
+                <input type="radio" name="Q6" value="1">a. 4 <br>
+                <input type="radio" name="Q6" value="2">b. 5 <br>
+                <input type="radio" name="Q6" value="3">c. 6 <br>
+                <input type="radio" name="Q6" value="4">d. 7 <br>
+                <br>
+		<li><b>The function <input type="text" name="fib1">  gives a summary  about the function .</b></li>
+		<li><b>The default return type of a function is <input type="text" name="fib2">.</b></li> 
+
+
+</ol>
+<p> <input type="submit" value="Submit answers for evaluation" target="_blank"></p>
+</form>
 
           </div>
 
@@ -309,13 +337,17 @@ edit -->
 	    </p>
 		<p>
 <ol>
-<li> Write the code for the problem or upload a solution. </li>
-<li> Press the 'i' button get info about the problem which you have to solve.</li>
-<li> If you are finding it difficult to solve the solution, then you can use the 4 levels of incresingly descriptive hints, but try to use minimum number of hints.</li>
-<li> Compile the code by pressing the compile button. </li>
-<li> If code is not compling then correct the error and/or warnings. </li>
-<li> To execute the code and see output, press the execute button. </li>
-</ol>
+<li>  The top window panel gives the problem statment and the relevant steps to solve the proble throughout the course of the lab. </li>
+<li>  Click on the square to define a function for calculating the area of a square. </li>
+<li>  Similarly define functions for the other geometrical figures </li>
+<li>  The defined functions are shown in the middle window </li>
+<li>  Now do appropriate function calls in the main program to compute the area of the figure displayed </li>
+<li>  Press execute to execute the code and see the output </li>
+</ol>  
+        <br>
+        <img src="function_lab.jpg" >
+        <br>
+
 		<p>
 
 	  </div>
@@ -338,23 +370,11 @@ edit -->
 
           <div id="experiment-article-section-8-content" 
           class="content">
-            <ul>	
-              <li>
-                <a href="http://en.wikipedia.org/wiki/
-                Simple_harmonic_motion">http://en.wikipedia.org/wiki/Simple_harmonic_motion</a>
-              </li>
-              <li>
-                <a href="http://www.physics.uoguelph.ca/
-                tutorials/shm/Q.shm.html">http://www.physics.uoguelph.ca/tutorials/shm/Q.shm.html</a>
-              </li> 
-              <li>
-                Dynamics of structures by Anil K chopra. 
-              </li> 
-              <li>
-                <a href="http://surendranath.tripod.com/Applets/
-                Oscillations/SHM/SHMApplet.html">http://surendranath.tripod.com/Applets/Oscillations/SHM/SHMApplet.html</a> 
-              </li>
-            </ul>
+<ol>
+<li><a href="http://en.wikipedia.org/wiki/Function_(computer_science)" > http://en.wikipedia.org/wiki/Function_(computer_science) </a>
+<li><a href="www.cprogramming.com/tutorial/lesson16.html " > www.cprogramming.com/tutorial/lesson16.html  </a>
+<li><a href="http://erwnerve.tripod.com/prog/recursion/recintro.htm" >http://erwnerve.tripod.com/prog/recursion/recintro.htm</a>
+</ol>
           </div>
 
         </section>
