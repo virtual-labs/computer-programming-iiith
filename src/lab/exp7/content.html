@@ -104,9 +104,13 @@ Can we create a collection of data elements of various data types and refer to t
         </div>
        <div id="experiment-article-section-2-content" 
         class="content">
-
-Arrays are used to store large sets of data and manipulate them but the disadvantage is that all the elements stored in an array are to be of the same data type. If we need to use a collection of different data type items it is not possible using an array. When we require using a collection of different data items of different data types we can use a structure. Structure is a method of packing data of different types. For example, suppose you want to store information about students enrolling in a university. Then, you may naturally want to store information like Student Name, Roll Number, Gender, Batch, etc. Ofcourse, you can create separate arrays for storing each of these quantities, but notice that for each student this diverse data is highly related. So, using a structre to pack these data entries into a single variables would be a good choice. In this case we can define the structure as,
-<pre class="prettyprint lang-c">
+<p>
+Arrays are used to store large sets of data and manipulate them but the disadvantage is that all the elements stored in an array are to be of the same data type. If we need to use a collection of different data type items it is not possible using an array. When we require using a collection of different data items of different data types we can use a structure. 
+</p>
+<p>
+Structure is a method of packing data of different types. For example, suppose you want to store information about students enrolling in a university. Then, you may naturally want to store information like Student Name, Roll Number, Gender, Batch, etc. Ofcourse, you can create separate arrays for storing each of these quantities, but notice that for each student this diverse data is highly related. So, using a structre to pack these data entries into a single variables would be a good choice. In this case we can define the structure as,
+</p>
+<p><pre class="prettyprint lang-c">
 
 struct student_record{
 char Name[100];
@@ -114,26 +118,29 @@ int Roll;
 char gender;
 char Stream[100];
 };
-</pre>
-This definition will practically create a new datatype students_record having a 2 character arrays, one integer and one character. So, in the main function one can define variables of this new compound datatype as,
-<pre class="prettyprint lang-c">
+</pre></p>
+<p>
+This definition will practically create a new datatype students_record having a 2 character arrays, one integer and one character. So, in the main function one can define variables of this new compound datatype as,</p>
+<p><pre class="prettyprint lang-c">
 student_record student1, student2;
-</pre>
+</pre></p>
+<p>
 You can even define an array of structure variables like,
-<pre class="prettyprint lang-c">
+</p>
+<p><pre class="prettyprint lang-c">
 students_record students[100];
-</pre>
-
-Now, the individual elements of a structure variable can be addressed by the dot(.) operator. For example, the variable student1 can initialized using the following statements:
-<pre class="prettyprint lang-c">
+</pre></p>
+<p>
+Now, the individual elements of a structure variable can be addressed by the dot(.) operator. For example, the variable student1 can initialized using the following statements:</p>
+<p><pre class="prettyprint lang-c">
 strcpy(student1.Name,"Abc");
 student1.Roll=24;
 student1.gender='m';
 strcpy(student1.Stream,"Computer Science");
-</pre>
-
+</pre></p>
+<p>
 An interesting thing to note is that the memory allocation for the whole structure is done contigously. So, size of one variable of type student_record is 100+4+1+100=205 bytes. And, if r1 and r2 are two variables of the structure struct_record, then writing r1=r2 is equivalent to copying the data in 205 bytes corresponding to r2 and copying them into r1.
-
+</p>
 
         </div>
       </section>
@@ -262,7 +269,7 @@ An interesting thing to note is that the memory allocation for the whole structu
 		<br>
 
                 <li><b>What will be the ouptut of the following function call: fun4(4,3); where fun4 is defined as: </b> </li>
-		<pre class="prettyprint lang-c">
+		<p><pre class="prettyprint lang-c">
 		typedef struct S
 		{
                		int x;
@@ -285,7 +292,7 @@ An interesting thing to note is that the memory allocation for the whole structu
         	        b=func(a,b);
                		printf("%d %d\n",b.x,b.y);
                 }
-		</pre>
+		</pre></p>
                 <input type="radio" name="Q5" value="1">a. 10 60<br>
                 <input type="radio" name="Q5" value="2">b. 20 60<br>
                 <input type="radio" name="Q5" value="3">c. 40 50<br>
@@ -302,13 +309,13 @@ An interesting thing to note is that the memory allocation for the whole structu
                 <input type="radio" name="Q7" value="2">b. False<br>
 		<br>
                 <li><b>The following structure declaration is correct? </b> </li>
-		<pre class="prettyprint lang-c">
+		<p><pre class="prettyprint lang-c">
 		typedef struct X
 		{
 			int x;
 			int y=50;
 		}X;
-		</pre>
+		</pre></p>
                 <input type="radio" name="Q8" value="1">a. True<br>
                 <input type="radio" name="Q8" value="2">b. False<br>
 		
@@ -339,6 +346,7 @@ An interesting thing to note is that the memory allocation for the whole structu
           class="content">
 	    
 		<p>
+<ol>
 <li>  Press start to start the experiment and select a value of N. </li>
 <li>  Press next to see the execution of the code </li>
 <li>  Relavant line in the code is shown here </li>
@@ -369,6 +377,7 @@ An interesting thing to note is that the memory allocation for the whole structu
 
           <div id="experiment-article-section-8-content" 
           class="content">
+
 <ol>
 <li><a href="http://www.exforsys.com/tutorials/c-plus-plus/c-structures.html"> http://www.exforsys.com/tutorials/c-plus-plus/c-structures.html </a></li>
 <li><a href="http://en.wikipedia.org/wiki/Structure"> http://en.wikipedia.org/wiki/Structure </a></li>

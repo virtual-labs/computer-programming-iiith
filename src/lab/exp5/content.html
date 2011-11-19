@@ -110,41 +110,49 @@ edit -->
     <p>
 	Function basically is a independent piece of code which takes some variables as input and returns a result. The function may optionally update the values of the input variables. Writing a function involves clearly specifying the characteristics of the funciton in its prototype. The prototype of a function looks like:<br>
 <br>
-	<pre class="prettyprint lang-c">
+	<p><pre class="prettyprint lang-c">
 	return_type Function_name(datatypes_of_input_variables);
-	</pre>
+	</pre></p>
 	<br>
+	<p>
 	For example, the prototype of a function for computing tax and returning the total payable amount may look like: <br>
+	</p>
 	
-	<pre class="prettyprint lang-c">
+	<p><pre class="prettyprint lang-c">
 	float compute_total(float ,float );
-	</pre>
+	</pre></p>
         </p>
+<p>
 	This states that the name of the function is <i>compute_total</i>. It accepts two float variables as input and returns a float value as output. Next, we define the function by writing the code corresponding to the computation of the return value of the function. <br> 
-	<pre class="prettyprint lang-c">
+<p>
+	<p><pre class="prettyprint lang-c">
 	float compute_total(float subtotal,float tax_rate)
 	{
 		float total;
 		total=subtotal*(1+(tax_rate/100));
 		return total;
 	}
-	</pre>
+	</pre></p>
+<p>
 	The input variables in this function are named subtotal and tax_rate and both of them are of float datatype. The value which this function return will be type casted into float before returning. This function can be called from the main function as:<br>
-	<pre class="prettyprint lang-c">
+<p>
+	<p><pre class="prettyprint lang-c">
 	total=compute_total(1000,8);
-	</pre>
+	</pre></p>
 	<br>
 	<br>
+<p>
 	A complete code with functions may look like this:<br>
+</p>
 	<br>
-	<pre class="prettyprint lang-c">
+	<p><pre class="prettyprint lang-c">
 	function_prototypes;
 	main()
 	{
 	function_calls;
 	}
 	function definitions;
-	</pre>
+	</pre></p>
 </div>
       </section>
 
@@ -272,7 +280,7 @@ edit -->
                 <input type="radio" name="Q5" value="4">d. double <br>
                 <br>
 		<li><b> What is printed when this program is executed</b></li>
-		<pre class="prettyprint lang-c">
+		<p><pre class="prettyprint lang-c">
 		int f(int );
 		main()
 		{
@@ -286,7 +294,7 @@ edit -->
 
 		return f(--x);
 		}
-		</pre>
+		</pre></p>
                 <input type="radio" name="Q6" value="1">a. 4 <br>
                 <input type="radio" name="Q6" value="2">b. 5 <br>
                 <input type="radio" name="Q6" value="3">c. 6 <br>
@@ -319,9 +327,7 @@ edit -->
 	
           <div id="experiment-article-section-7-content" 
           class="content">
-	    <p>
-	      Procedure for the experiment is as follows.
-	    </p>
+	  
 		<p>
 <ol>
 <li>  The top window panel gives the problem statment and the relevant steps to solve the proble throughout the course of the lab. </li>
