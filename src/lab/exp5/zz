@@ -1,0 +1,19 @@
+              <li><b>Function prototype is required in every program</b></li>
+                False<br>
+                <br>
+                <li><b>Functions can return more than one value at a time</b></li>
+                False<br>
+                <br>
+                <li><b> What is the default return value of a function?</b></li>
+                int<br>
+                <br>
+                <li><b>Which of the following is an invalid function prototype?</b></li>
+                float fun(int aa, bb);<br>
+                <br>
+                <li><b>What is the return type of the function with prototype: "int func(char x, float v, double t);"</b></li>
+                int <br>
+                <br>
+                <li><b> What is printed when this program is executed</b></li>
+                4 <br>
+                <br>
+
