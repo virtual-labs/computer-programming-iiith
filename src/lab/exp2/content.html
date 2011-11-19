@@ -119,11 +119,15 @@ int z;
 z=x+y;
 }
 </pre>
+</p>
+<p>
 <br>
 A conditional is a statement that instructs the computer to execute a certain block of code or alter certain data only if a specific condition has been met. Conditionals are used to implement decision-making based on the truthfulness of a condition or the state of a variable or an expression. The most common conditional construct is the If-Else constrct and Switch-Case construct. 
 
 <br>
 <br>
+</p>
+<p>
 <big>If construct</big>
 <br>
 It is the most simple construct which is used to specify that a block should only be executed only if certian condition is true. The syntax of an if statement is as follows:
@@ -134,6 +138,8 @@ if(<i>test expression</i>)
         block1;
 }
 </pre>
+</p>
+<p>
 Here, if the <i>test expression</i> is true, then statements in <i>block1</i> are executed. If the <i>test expression</i> is false then statements in <i>block1</i> are completly ignored.
 <br>
 <br>
@@ -151,6 +157,8 @@ else
         block2;
 }
 </pre><br>
+</p>
+<p>
 Here, if the <i>test expression</i> is true, then statements in <i>block1</i> are executed. If the <i>test expression</i> is false then statements in <i>block2</i> are executed.
 
 <br>
@@ -175,6 +183,8 @@ else{
         } 
 } 
 </pre>
+</p>
+<p>
 Here if the <i>test expression1</i> is true then <i>statements1</i> are executed followed by the evaluation of <i>test expression2</i>. If <i>test expression2</i> is true, <i>statements2</i> are executed; if it is false, then <i>statements2</i> are completly ignored.<br>
  If <i>test expression1</i> is false, then <i>statements3</i> are executed followed by evalution of <i>test expression3</i>. If <i>test expression3</i> is true <i>statements4</i> are executed. If <i>test expression3</i> is false then <i>statements5</i> are executed.
 <br>
@@ -196,10 +206,14 @@ else if (<i>test expression4</i>)
 else 
    statements5; 
 </pre>
+</p>
+<p>
 Here, the <i>test expression1</i> is evaluated first and if it is true then the <i>statements1</i> are executed and we exit out of the construct. If <i>test expression1</i> is false, then <i>test expression2</i> is evaluated. If <i>test expression2</i> is true then <i>statements2</i> are executed and we exit out of the construct.  If <i>test expression2</i> is false, then <i>test expression3</i> is evaluated. If <i>test expression3</i> is true then <i>statements3</i> are executed and we exit out of the construct.  If <i>test expression3</i> is false, then <i>test expression4</i> is evaluated. If <i>test expression4</i> is true then <i>statements4</i> are executed and we exit out of the construct.  If <i>test expression4</i> is false, then <i>statements4</i> are executed.
 
 <br>
 <br>
+</p>
+<p>
 <big>Switch-Case constructs</big><br>
 A Switch-Case is a construct which is used to allow jumping to one of the multiple blocks. This decision is taken based on the value of a variable or an expression. Its purpose is to allow the value of a variable or an expression to control the flow of program execution via a multiway branch. A default case may also be specified to be executed when the given state has not been addressed by any of the other cases. 
 <br>
@@ -218,6 +232,8 @@ switch ( <i>test expression</i> ) {
     statements_default; 
 } 
 </pre>
+</p>
+<p>
 Here, if <i>test expression</i> evaluates to 1, then <i>statements1</i> are evaluated. And then due to <i>break</i>, we exit the construct. 
 If <i>test expression</i> evaluates to 2, then <i>statements1</i> are evaluated. And then due to <i>break</i>, we exit the construct. 
 Similarly, if <i>test expression</i> evaluates to some value n for which a case has been written under <i>case n:</i>, then <i>statementsn</i> are evaluated. And then due to <i>break</i>, we exit the construct.
@@ -226,7 +242,8 @@ If <i>test expression</i> evalutes to a value for which a case has not been list
 <br>
 <br>
 
-
+</p>
+<p>
 <b><i>Important: </i></b><br>
 
 1. Take special note of the difference between the relational operator "equal to" which is denoted by "==", and the assignement operator which is denoted by "=".  Misuse of "=" in the place of "==" won't be reported by the compiler. <br>
@@ -243,6 +260,8 @@ if(x==3){
 statements1;
 }
 </pre>
+</p>
+<p>
 will result into the test expression for the if construct to always be true and hence, <i>statements1</i> are always executed.
 <br>
 2. Typically, the last statement for each case is a break statement. This causes program execution to jump to the statement following the closing bracket of the switch statement, which is what one would normally want to happen. However if the break statement is omitted, program execution continues with the first line of the next case, if any. This is called a fall-through.<br>
@@ -652,22 +671,24 @@ will result into the test expression for the if construct to always be true and 
   <b> Experiment Part I: Position of Point w.r.t to a Rectangle</b><br><br>
 
 	<i> Here we shall see how the problem of determining whether a given point is inside or outside a rectangle can be solved using various conditional constructs.</i><br>	<br>
-	<h3>Manual</h3>
+	
 	1. Initialize the values of the variables on the top left. X and Y denote the x and y coordinate of the input point.<br>
         2. Select the code prototype with which you would like to solve the problem.<br>
         3. Click start to begin the expriment.<br>
         4. Click Next to get a step by step execution of the code along with the reasoning which is displayed on the right hand side panel. <br>
+<br>
 	<img src="images/vlab2_a.jpg">
 <br>
 <br>
         <b>Experiment Part II: Selecting the Day of a week</b><br><br>
 
 	<i> Here we shall see how a switching construct works by associating one number to each of the days.</i><br><br>
-	<h3>Manual</h3>
+	
         1. First, select a day from the top left by clicking on the correspoding radio button or enter any number in the textbox directly. Then, click on SUBMIT.<br>
 	2. Select the code prototype with which you would like to solve the problem.<br>
         3. Click on the activated START button to begin the experiment.<br>
         4. Click Next to get a step by step execution of the code. The changes in local variables can be visualized on the bottom left of the screen. The OUTPUT can be visualized on the right part of the screen. <br>
+<br>
 	<img src="images/vlab2_b.jpg">
 <br>
 
