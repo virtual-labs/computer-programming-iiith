@@ -22,7 +22,7 @@ edit -->
 
     <div id="experiment-header-heading" class="heading">
      
-      <a href="../index.html">Problem Solving Lab</a>	
+      <a href="../index.html">Programming Lab</a>	
     </div>
 
     
@@ -39,7 +39,7 @@ edit -->
     
       <header id="experiment-article-heading" class="heading">
        
-     HEADING
+   Pointers
         
       </header>
 
@@ -75,7 +75,10 @@ edit -->
           <div id="experiment-article-section-1-content" 
           class="content">	
             
+<p>
+Every time a variable is declared, some bytes are allocated to that variable depending on its datatype. For example, int takes 4 bytes, a char takes only one byte. Arrays allow allocation of even larger number of storage space or "bytes". Each of these bytes has a distinct address in the main memory. Pointer is a datatype which can store this address. Hence a pointer can serve as a "reference" to the data contained other variables. This has some useful applications, most importantly, allowing users to modify data from within a function without needing to make a copy of the data, and also allowing the user to make "linked" data structures.
 
+</p>
 
         </div>
 
@@ -99,6 +102,80 @@ edit -->
         </div>
        <div id="experiment-article-section-2-content" 
         class="content">
+<p>
+A pointer is a programming language data type which can store memory addresses of other variables. A pointer variable corresponding to any data type can be declared by using * before the name of the pointer. </p>
+<p>
+<pre  class="prettyprint lang-c">
+int *pointer1_1,*pointer2_i, var_i=5;
+</pre>
+</p>
+<p>
+This would declare 2 integer pointers meant to store references(memory address) to variables of integer data type. Note that var_i is just a normal integer variable. Alternatively, pointers can also be declared as:
+</p>
+<p>
+<pre  class="prettyprint lang-c">
+int* pointer1_1,pointer2_i;
+int var_i=5;
+</pre>
+</p>
+<p>
+The & operator can be used with any variable to get its memory address. So, writing
+<p>
+</p>
+<p>
+<pre  class="prettyprint lang-c">
+pointer1_i=&var_i;
+</pre>
+</p>
+<p>
+would assign the memory address of var_i to pointer1_i. 
+</p>
+<p>
+<table border=0 ><tr><td><img src="pointers.png" align="center" title="Figure explaining the working of pointers."><caption align="Top" ><h4>Figure explaining the working of the statement: a=&b; <h4></caption></td></tr></table>
+<br>
+</p>
+<p>
+The * operator is used to access the values stored at a given address. So, writing
+</p>
+<p>
+<pre  class="prettyprint lang-c">
+printf("%d\n",*pointer1_i);
+</pre>
+</p>
+<p>
+would print 5 on the console. This process of accessing the value stored at a given position is known as dereferencing a pointer. Similarly, to store references to character or float variables one can define char or float type pointers. 
+</p>
+<p>
+A pointer can be used to allocate memory in the runtime using the malloc() function, defined in stdlib.h, by doing dynamic memory allocation. Writing 
+</p>
+<p>
+<pre  class="prettyprint lang-c">
+int *ptr=(int *)malloc(20*(sizeof(int));
+</pre>
+</p>
+<p>
+will allocate a space 20 integer variables and store the address of the first byte in ptr. An array, infact, is just a constant pointer to which allocation is done automatically. Hence, writing
+</p>
+<p>
+<pre  class="prettyprint lang-c">
+int arr[100];
+</pre>
+</p>
+<p>
+is equivalent to writing
+</p>
+<p>
+<pre  class="prettyprint lang-c">
+const int* arr=(int *)malloc(100*sizeof(int));
+</pre>
+</p>
+<p>
+So, writing *arr will give the value stored at arr[0].
+</p>
+
+<p>
+Arithmatical operations like addition and subtraction can be performed to a pointer. The nature of these arithmatic operations is what distinguishes an integer pointer from, say, a character pointer, which otherwise just store memory addresses for another variable. Adding one to an interger pointer makes to point to the next integer, and hence, it skips 4 bytes. Adding one to a character pointer makes it to point to the next character, and hence, it skips only 1 byte. Hence, for the array arr, writing arr[3] is equivalent to writing *(arr+3). Both refer to the value stored in the 4th cell of the array.
+</p>
 
 
 
@@ -124,7 +201,11 @@ edit -->
         class="content">
 
         <p>
-	To learn to solve problems related to Numerical Representation using Computer Programming.
+	<ol>
+	<li>  To understand the concept of memory adddress associated with every variable.  </li>
+	<li>  To understand pointer referencing and dereferencing. </li>
+	<li>  To understand how pointers are useful in dynamic allocation of memory. </li>
+	</ol>
 	</p>
 
 
@@ -149,8 +230,21 @@ edit -->
         <div id="experiment-article-section-4-content" 
         class="content">
  <p>
-        <a href="lab.html" target="_blank">Go to Lab (Click here)</a>
+        <a onclick="window.open('./pointers/build/pointer.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;" class="qtlink" href="./pointers/build/pointer.html">
+
+	Go to lab on Basic Pointers(Click here)
+</a>
          </p>
+<p>
+
+
+	<a onclick="window.open('./pointers1/pointers1/build/pointer1.html', null,'scrollbars=yes, width=' + (screen.availWidth) +',height=' + (screen.availHeight)); return false;" class="qtlink" href="./pointers1/pointers1/build/pointer1.html">
+
+	Go to lab on Call by Reference(Click here)
+	</a>
+
+
+</p>
 
         </div>
 
@@ -173,7 +267,7 @@ edit -->
         class="content">
 
 	<p> 
-	For each problem you have to write a program in C or C++. Each question is evaluted on test cases. An answer is correct only when all the test cases are cleared. 
+	In this lab you will learn the basic concepts of pointers and addresses. You will also understand the process of memory allocation and passing in reference.
 	</p> 
 
           </div>
@@ -197,48 +291,40 @@ edit -->
           class="content">
             
             <p>
-              
-              <b>Q1.</b> 
-              Time taken for one complete oscillation 
-              is called Time Period of the oscillator. <br> 
-              <input type="radio" name="q1" id="q1" value="1"> 
-                <font color="green"> True </font> <br> 
-              <input type="radio" name="q1" id="q1" value="0">
-                <font color="red"> False </font> <br/><br/> 
-              
-              <b>Q2.</b> 
-              Time period of the oscillator is constant for 
-              given values of mass, length and initial 
-              conditions.<br> 
-              <input type="radio" name="q2" id="q2" value="1"> 
-                <font color="green"> True </font> <br> 
-              <input type="radio" name="q2" id="q2"value="0">
-                <font color="red"> False </font> <br/><br/> 
-              
-              <b>Q3.</b> 
-              Value of Time period depends on initial 
-              conditions. <br> 
-              <input type="radio" name="q3" id="q3" value="1"> 
-                <font color="green"> True </font> <br> 
-              <input type="radio" name="q3" id="q3"value="0">
-                <font color="red"> False </font> <br/><br/> 
-              
-              <b>Q4.</b> 
-              Value of time period depends on mass. <br> 
-              <input type="radio" name="q4" id="q4" value="1"> 
-                <font color="green"> True </font> <br> 
-              <input type="radio" name="q4" id="q4" value="0">
-                <font color="red"> False </font> <br/><br/> 
-              
-              <b>Q5.</b> 
-              Value of time period depends on length of the 
-              oscillator. <br> 
-              <input type="radio" name="q5" id="q5" value="1"> 
-                <font color="green"> True </font> <br> 
-              <input type="radio" name="q5" id="q5"value="0">
-                <font color="red"> False </font> <br/><br/> 
-              <input type="submit" value="Submit Answers" 
-                class="button" />
+          <form name="quiz" action="quizresults.php" method="post" target="_blank" onsubmit="return window.confirm(&quot;You are submitting information to an external page. \nAre you sure?&quot;);">
+	 <ol>
+                <li><b>What would be the equivalent pointer expression for referring the array element a[i][j][k][l] </b></li>
+		
+		<input type="radio" name="Q1" value="1">a. ((((a+i)+j)+k)+l)<br>
+                <input type="radio" name="Q1" value="2">b. *(*(*(*(a+i)+j)+k)+l)<br>
+                <input type="radio" name="Q1" value="3">c. (((a+i)+j)+k+l)<br>
+                <input type="radio" name="Q1" value="4">d. ((a+i)+j+k+l)<br>
+                <br>
+
+                <li><b>NULL pointer points to the 0th memory address: </b></li>
+                <input type="radio" name="Q2" value="1">a. True<br>
+                <input type="radio" name="Q2" value="2">b. False<br>
+                <br>
+                <li><b>Pointer is a : </b> </li>
+                <input type="radio" name="Q3" value="1">a. A keyword used to create variables<br>
+                <input type="radio" name="Q3" value="2">b. A variable that stores address of an instruction<br>
+                <input type="radio" name="Q3" value="3">c. A variable that stores address of other variable<br>
+                <input type="radio" name="Q3" value="4">d. All of the above<br>
+                <br>
+                <li><b> If a variable is a pointer to a structure, then which of the following operator is used to access data members of the structure through the pointer variable?: </b> </li>
+		
+                <input type="radio" name="Q4" value="1">a. "."<br>
+                <input type="radio" name="Q4" value="2">b. "&"<br>
+                <input type="radio" name="Q4" value="3">c. "*"<br>
+                <input type="radio" name="Q4" value="4">d. "->"<br>
+		<br>
+
+		<br>
+		<li><b>The name of the array is a pointer to the <input type="text" name="fib1"> element of the array.</b></li><br><br>
+	</ol>
+<p> <input type="submit" value="Submit answers for evaluation" target="_blank"></p>
+
+</form>
             </p>
 
           </div>
@@ -260,19 +346,12 @@ edit -->
 	
           <div id="experiment-article-section-7-content" 
           class="content">
-	    <p>
-	      Procedure for the experiment is as follows.
-	    </p>
-		<p>
+	  <p>
 <ol>
-<li> Write the code for the problem or upload a solution. </li>
-<li> Press the 'i' button get info about the problem which you have to solve.</li>
-<li> If you are finding it difficult to solve the solution, then you can use the 4 levels of incresingly descriptive hints, but try to use minimum number of hints.</li>
-<li> Compile the code by pressing the compile button. </li>
-<li> If code is not compling then correct the error and/or warnings. </li>
-<li> To execute the code and see output, press the execute button. </li>
+<li><a href="http://www.exforsys.com/tutorials/c-language/c-pointers.html"> http://www.exforsys.com/tutorials/c-language/c-pointers.html </a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pointer_%28computer_science%29"> http://en.wikipedia.org/wiki/Pointer_(computer_science) </a></li>
 </ol>
-		<p>
+	<p>
 
 	  </div>
 	
@@ -294,23 +373,11 @@ edit -->
 
           <div id="experiment-article-section-8-content" 
           class="content">
-            <ul>	
-              <li>
-                <a href="http://en.wikipedia.org/wiki/
-                Simple_harmonic_motion">http://en.wikipedia.org/wiki/Simple_harmonic_motion</a>
-              </li>
-              <li>
-                <a href="http://www.physics.uoguelph.ca/
-                tutorials/shm/Q.shm.html">http://www.physics.uoguelph.ca/tutorials/shm/Q.shm.html</a>
-              </li> 
-              <li>
-                Dynamics of structures by Anil K chopra. 
-              </li> 
-              <li>
-                <a href="http://surendranath.tripod.com/Applets/
-                Oscillations/SHM/SHMApplet.html">http://surendranath.tripod.com/Applets/Oscillations/SHM/SHMApplet.html</a> 
-              </li>
-            </ul>
+      <ol>
+
+<li><a href="http://www.exforsys.com/tutorials/c-language/c-pointers.html"> http://www.exforsys.com/tutorials/c-language/c-pointers.html </a></li>
+<li><a href="http://en.wikipedia.org/wiki/Pointer_%28computer_science%29"> http://en.wikipedia.org/wiki/Pointer_(computer_science) </a></li>
+</ol>
           </div>
 
         </section>
