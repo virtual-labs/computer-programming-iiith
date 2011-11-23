@@ -112,6 +112,8 @@ In this lab, we shall see the working of looping constructs.
 
 In order to understand the working of looping constructs, it is important to understand the term block. A group of code statements that are associated and intended to be executed as a unit is referred to as a block. In C, the beginning of a block of code is denoted by writing a set of statements with in curly braces. It is not necessary to place a semicolon after the end of a block. Blocks can be left empty. A block and can be written inside another block of statements, in such a case the former block is said to be nesting inside the other block. <br>
 A loop is a construct that instructs the computer to repeatedly execute a certain block of code until a certain condition is met or for a certain fixed number of times. Every such repetition is called an iteration. Break statement can be used to exit a looping construct and a Continue statement can used to start another iteration at any point. A looping construct typically has three sections:<br>
+</p>
+<p>
 <ol>
 <li> An Initialization part where variables are initialized before looping is started. These are executed only once.</li>
 <li> A Test expression which determines when to exit the looping construct.</li>
@@ -134,9 +136,11 @@ statements1;
 <p>
 This improves the readability of the construct. The initialization expression is executed only once and is immediately followed by checking of the <i>test expression</i>. Hence, it is an entry controlled loop. If the <i>test expression</i> is false, then the construct is exited.  So, it is possible that the <i>statements1</i> may not get executed even once. If the test expression is true then <i>statements1</i> are executed and it is followed by the execution of the <i>update statements</i>. Now, the <i>test expression</i> is evaluted again to check whether the loop should be exited. If not, the whole process is repeated, starting from the execution of <i>statements1</i>.
 <br>
-
+</p>
+<p>
 The sequence of execution of statements is:
-
+</p>
+<p>
 <ol>
 <li>Initialization</li>
 <li>Test Expression</li>
@@ -157,6 +161,8 @@ Everytime when the test expression is evaluated, if it becomes false, then the l
 <br>
 While loop is another entry controlled loop. It works in a similar way as a for loop the only difference is that the <i>initialization</i> statements, test expression and the update statements are not written together. In fact, the update statements are written along with the block statements. The looping is terminated only when the <i>test expression</i> becomes false.
 <br>
+</p>
+<p>
 <pre class="prettyprint lang-c">
 <i>initialization;</i>
 while(<i>test expression</i>){
@@ -168,6 +174,8 @@ while(<i>test expression</i>){
 <p>
 <br>
 The sequence of execution of statements is:
+</p>
+<p>
 <ol>
 <li>Initialization</li>
 <li>Test Expression</li>
@@ -176,14 +184,23 @@ The sequence of execution of statements is:
 <li>Test Expression</li>
 <li>...</li>
 </ol>
+</p>
+<p>
 Everytime when the test expression is evaluated, if it becomes false, then the loop is exited. <br>
+</p>
+<p>
 <br>
 <br>
-
+</p>
+<p>
 <big>Do-while loop</big>
+</p>
 <br>
+<p>
 The the block statements in the for and while loops may not get executed at all because the test condition is checked before the execution. The Do-while loops ensure that the block statements are executed at least once, because in this the test expression is checked after doing one execution of the loop body. As usual the update statements come before the test condition loop. The following is the syntax of Do-while loops:
+</p>
 <br>
+<p>
 <pre class="prettyprint lang-c">
 do{
         statements1;
@@ -194,7 +211,10 @@ do{
 <p>
 <br>
 The sequence of execution of statements is:
+</p>
+<p>
 <ol>
+
 <li>Initialization</li>
 <li>Block Statements</li>
 <li>Update statements</li>
@@ -204,20 +224,24 @@ The sequence of execution of statements is:
 <li>Test Expression</li>
 <li>...</li>
 </ol>
+
 Everytime when the test expression is evaluated, if it becomes false, then the loop is exited. <br>
+
 </pre></code>
-
+</p>
 
 <br>
 <br>
-
+<p>
 <big>Important:</big>
+<p>
 <br>
+</p>
+<p>
 <ol>
 <li>  Any loop can be exited at anytime by using a break  statement.</li>
 <li>  Next iteration of the loop can be started at anypoint by using the continue statement.</li>
 </ol>
-
        
  </p>
 
