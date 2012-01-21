@@ -75,37 +75,29 @@ edit -->
           class="content">	
             
 	<p>
-An array is a group of items that can be identified as similar because
-they are of the same nature.</p>
+An array is a group of items which have similar nature.</p>
 <p>
-Arrays are a vital part of programming, as they allow the programmer
-to store more than one value in a variable, whilst retaining a single
-reference. If we think of a variable as a single slot in memory (or a
-box) that can contain data of a certain type - number, character, etc.
-- then an array is the equivalent of a box divided into partitions,
-each containing a piece of data. Of course, because the array box is
-storing more information than a single variable box, it is much bigger
-: it needs more memory.</p>
+Arrays play a significant role in any programming language, as they 
+allow the programmer to store more than one value in a variable. That is, 
+you can use the same variable name to refer to all the values. 
+An array is analogus to a shelf with many identical compartments. 
+To identify a compartment, you just need to specify its position. 
+Similarly, in a array variable, you can store many values of a single datatype. 
+For example: 10 integers, 4 floating numbers, 12 characters etc. 
+Not surprisingly, an array variable takes larger memory than a single variable of a datatype.
 
-<p>We can use the same name to access the variable, but we need some way
-to differentiate between the individual slots. To do this we use an
-index into the array. For example, supposing we have an array that is
-100 units wide, we might access the hundredth unit thus:</p>
+<p>We can use the same name to access the values, but how do we differentiate between them. To do this we use an 
+index into the array. For example, take an array(myArray) of 100 integers, we can access the hundredth unit:</p>
 <p>
 myArray[99] = 3;<br>
 </p>
 <br>
+
 <p>
-This example also illustrates another feature of most arrays - the
-index is usually zero based. In other words, the index to the first
-item is [0] and the index to the last item is [number of elements -
-1].</p>
-<p>
-In many programming languages, a string is treated as an array of
-characters. Usually these arrays are terminated with a null character
-to indicate the end of the string. This allows software to process
-strings without knowing the dimension of the array at design time.
-	</p> 
+Notice something unusual? The index is usually zero based. So, the hundredth element is shown accessed using [99]. 
+In other words, the index to the first item is at [0] and the index to the last item is [#elements -1].
+</p>
+
 
         </div>
 
