@@ -29,8 +29,8 @@ public class factorial extends javax.swing.JApplet {
     String[] hanoiCode = {
         "void hanoi(int S,int D,int T,int n ){",
         "if( n == 1 ){",
-        "\tprintf(\"Move top disk from Tower %d ---> %d\",S,D);",
-        "\treturn; }",
+        "&nbsp;&nbsp;&nbsp;&nbsp;printf(\"Move top disk from Tower %d ---> %d\",S,D);",
+        "&nbsp;&nbsp;&nbsp;&nbsp;return; }",
         "hanoi( S , T , D , n-1 );",
         "printf(\"Move top disk from Tower %d ---> %d\",S,D);",
         "hanoi( T , D , S , n-1);",
@@ -227,7 +227,6 @@ public class factorial extends javax.swing.JApplet {
         codePane = new javax.swing.JEditorPane();
         outputscrollpane = new javax.swing.JScrollPane();
         outputvis1 = new outputvis();
-        jLabel2 = new javax.swing.JLabel();
 
         topPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -242,7 +241,7 @@ public class factorial extends javax.swing.JApplet {
             .addGroup(topPanelLayout.createSequentialGroup()
                 .addGap(213, 213, 213)
                 .addComponent(header, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(289, Short.MAX_VALUE))
+                .addContainerGap(286, Short.MAX_VALUE))
         );
         topPanelLayout.setVerticalGroup(
             topPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -281,9 +280,9 @@ public class factorial extends javax.swing.JApplet {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("DejaVu Sans", 1, 14));
+        jLabel3.setFont(new java.awt.Font("DejaVu Sans", 1, 14)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("INITIALIZE VARIABLE");
+        jLabel3.setText("Initailize Variable");
 
         javax.swing.GroupLayout startButtonLayout = new javax.swing.GroupLayout(startButton);
         startButton.setLayout(startButtonLayout);
@@ -292,38 +291,34 @@ public class factorial extends javax.swing.JApplet {
             .addGroup(startButtonLayout.createSequentialGroup()
                 .addGroup(startButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(startButtonLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(startButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(startButtonLayout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(nValue, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(24, 24, 24)
-                                .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, startButtonLayout.createSequentialGroup()
-                                .addComponent(strtButton, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, startButtonLayout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nValue, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67)
+                        .addComponent(strtButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(startButtonLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)))
+                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         startButtonLayout.setVerticalGroup(
             startButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(startButtonLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(startButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(okButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nValue, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nValue, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35)
-                .addGroup(startButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(strtButton, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(313, Short.MAX_VALUE))
+                    .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(strtButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         codePane.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -331,7 +326,7 @@ public class factorial extends javax.swing.JApplet {
         codePane.setContentType("text/html");
         codePane.setEditable(false);
         codePane.setFont(new java.awt.Font("DejaVu Sans", 0, 12)); // NOI18N
-        codePane.setText("<html>\n  <head>\n\n  </head>\n  <body>\n    <h1 style='color:#151b54;'><center>CODE</center></h1>\n    <p style=\"margin-top: 0; \">\n      <pre style='font-size:12;'><b>\nvoid main(){\n\n\tint N ;\n\n\tscanf(\"%d\", & N );\n\n\thanoi (1 , 2 , 3 , N );\n\n\t}\n\n\n\nvoid hanoi(int S,int D,int T,int n){\n\t\n\tif( n == 1 ){\n\n\t\tprintf(\"Move top disk from Tower %d --> %d\",S,D);\n\n\t\treturn ; }\n\n\thanoi( S , T , D , n-1 );\n\n\tprintf(\"Move top disk from Tower %d ---> %d\",S,D);\n\n\thanoi( T, D, S , n-1);\n\n\treturn ;\n\n\t}\n      </b></pre>\n    </p>\n  </body>\n</html>\n");
+        codePane.setText("<html>\n  <head>\n\n  </head>\n  <body>\n\n    <p style=\"margin-top: 0; \">\n      <pre style='font-size:15;'><b>\nvoid main(){\n  int N ;\n  scanf(\"%d\", & N );\n  hanoi (1 , 2 , 3 , N );\n  }\n\nvoid hanoi(int S,int D,int T,int n){\n  if( n == 1 ){\n     printf(\"Move top disk from Tower %d --> %d\",S,D);\n     return ; }\n\n  hanoi( S , T , D , n-1 );\n  printf(\"Move top disk from Tower %d ---> %d\",S,D);\n  hanoi( T, D, S , n-1);\n  return ;\n  }\n      </b></pre>\n    </p>\n  </body>\n</html>\n");
         codePane.setAutoscrolls(true);
         jScrollPane1.setViewportView(codePane);
 
@@ -343,15 +338,10 @@ public class factorial extends javax.swing.JApplet {
         );
         outputvis1Layout.setVerticalGroup(
             outputvis1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 493, Short.MAX_VALUE)
+            .addGap(0, 512, Short.MAX_VALUE)
         );
 
         outputscrollpane.setViewportView(outputvis1);
-
-        jLabel2.setFont(new java.awt.Font("DejaVu Sans", 1, 14));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("OUTPUT VISUALIZATION");
-        jLabel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, java.awt.Color.white, null, null));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -359,26 +349,23 @@ public class factorial extends javax.swing.JApplet {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(topPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(startButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 493, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(outputscrollpane, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)))
+                .addComponent(outputscrollpane, javax.swing.GroupLayout.PREFERRED_SIZE, 549, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(topPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 529, Short.MAX_VALUE)
-                    .addComponent(startButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(startButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(outputscrollpane, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE))))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE))
+                    .addComponent(outputscrollpane, javax.swing.GroupLayout.DEFAULT_SIZE, 530, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -389,7 +376,7 @@ public class factorial extends javax.swing.JApplet {
         if ( next_count <= 4 )  // when main is called
         {
         
-                String code = new String("<html>  <head>  </head>  <body> <h1 style='color:#151b54;'><center>CODE</center></h1> <p style='margin-top: 0; '> <pre style='font-size:12;'><b>");
+                String code = new String("<html>  <head>  </head>  <body>  <p style='margin-top: 0; '> <pre style='font-size:15;'><b>");
 
                 if( next_count < mainCode.length )
                 {
@@ -401,18 +388,18 @@ public class factorial extends javax.swing.JApplet {
             {
                     if(i < count_steps1)
                     {
-                            code = code.concat("<span style='color:red;'>" + mainCode[i] + "</span>\n\n\t");
+                            code = code.concat("<span style='color:red;'>" + mainCode[i] + "</span>\n&nbsp;&nbsp;");
                     }
                     else
                     {
-                            code = code.concat(mainCode[i]+"\n\n\t");
+                            code = code.concat(mainCode[i]+"\n&nbsp;&nbsp;");
                     }
             }
-            code = code.concat("\n\n");
+            code = code.concat("\n");
            // Finding the highlighted lines of the HANOI code
        
             for (int i = 0 ; i < hanoiCode.length; i++) {
-                        code = code.concat(hanoiCode[i] + "\n\n\t");             
+                        code = code.concat(hanoiCode[i] + "\n&nbsp;&nbsp;");             
             }
             code = code.concat("</b></pre>    </p>  </body></html>");
 
@@ -437,22 +424,22 @@ public class factorial extends javax.swing.JApplet {
                 okButton.setEnabled(false);
 
 
-                String code = new String("<html>  <head>  </head>  <body> <h1 style='color:#151b54;'><center>CODE</center></h1> <p style='margin-top: 0; '> <pre style='font-size:12;'><b>");
+                String code = new String("<html>  <head>  </head>  <body>  <p style='margin-top: 0; '> <pre style='font-size:15;'><b>");
 
            // Finding the highlighted lines of the MAIN code
                 int i = 0 ;
                 for(i = 0 ; i < mainCode.length -1; i++ )
                 {
-                            code = code.concat("<span style='color:red;'>" + mainCode[i] + "</span>\n\n\t");
+                            code = code.concat("<span style='color:red;'>" + mainCode[i] + "</span>\n&nbsp;&nbsp;");
                 }
-                code = code.concat("<span style='color:red; text-decoration:underline; '>" + mainCode[i] + "</span>\n\n\t");
+                code = code.concat("<span style='color:red; text-decoration:underline; '>" + mainCode[i] + "</span>\n&nbsp;&nbsp;");
 
-                code = code.concat("\n\n");
+                code = code.concat("\n");
            // Finding the highlighted lines of the HANOI code
 
                 for (i = 0 ; i < hanoiCode.length; i++)
                 {
-                           code = code.concat(hanoiCode[i] + "\n\n\t");
+                           code = code.concat(hanoiCode[i] + "\n&nbsp;&nbsp;");
                 }
 
 
@@ -470,38 +457,38 @@ public class factorial extends javax.swing.JApplet {
              k = next_count - 5  ;
             
 
-                String code = new String("<html>  <head>  </head>  <body> <h1 style='color:#151b54;'><center>CODE</center></h1> <p style='margin-top: 0; '> <pre style='font-size:12;'><b>");
+                String code = new String("<html>  <head>  </head>  <body>  <p style='margin-top: 0; '> <pre style='font-size:15;'><b>");
 
            // Finding the highlighted lines of the MAIN code
             for( int i = 0 ; i < mainCode.length ; i++ )
             {
                     if(i < count_steps1)
                     {
-                            code = code.concat("<span style='color:red;'>" + mainCode[i] + "</span>\n\n\t");
+                            code = code.concat("<span style='color:red;'>" + mainCode[i] + "</span>\n&nbsp;&nbsp;");
                     }
                     else
                     {
-                            code = code.concat(mainCode[i]+"\n\n\t");
+                            code = code.concat(mainCode[i]+"\n&nbsp;&nbsp;");
                     }
             }
-            code = code.concat("\n\n");
+            code = code.concat("\n");
            // Finding the highlighted lines of the HANOI code
        
             for (int i = 0 ; i < hanoiCode.length; i++) {
 
                 if ( i < hanoiLine[k] ) {
                         if ( (i == 2 || i == 3 ) && hanoiLine[k] > 2){ // If (n== 1) is not Satisfied ..
-                            code = code.concat(hanoiCode[i] + "\n\n\t");
+                            code = code.concat(hanoiCode[i] + "\n&nbsp;&nbsp;");
                         }
                         else {
-                            code = code.concat("<span style='color:blue; '>" + hanoiCode[i] + "</span>\n\n\t");
+                            code = code.concat("<span style='color:blue; '>" + hanoiCode[i] + "</span>\n&nbsp;&nbsp;");
                         }
                 }
                 else if ( i == hanoiLine[k] ) {
-                       code = code.concat("<span style='color:blue; text-decoration:underline; '>" + hanoiCode[i] + "</span>\n\n\t");
+                       code = code.concat("<span style='color:blue; text-decoration:underline; '>" + hanoiCode[i] + "</span>\n&nbsp;&nbsp;");
                 }
                 else {
-                        code = code.concat(hanoiCode[i] + "\n\n\t");
+                        code = code.concat(hanoiCode[i] + "\n&nbsp;&nbsp;");
                 }
             }
             code = code.concat("</b></pre>    </p>  </body></html>");
@@ -621,18 +608,18 @@ public class factorial extends javax.swing.JApplet {
  //----------------------------------------------------
           outputvis1.init();
           outputvis1.repaint();
-          String code = new String("<html>  <head>  </head>  <body> <h1 style='color:#151b54;'><center>CODE</center></h1> <p style='margin-top: 0; '> <pre style='font-size:12;'><b>");
+          String code = new String("<html>  <head>  </head>  <body>  <p style='margin-top: 0; '> <pre style='font-size:15;'><b>");
 
            // Adding MAIN code
             for( int i = 0 ; i < mainCode.length ; i++ )
             {
-                  code = code.concat(mainCode[i]+"\n\n\t");
+                  code = code.concat(mainCode[i]+"\n&nbsp;&nbsp;");
             }
-            code = code.concat("\n\n");
+            code = code.concat("\n");
            // Adding HANOI code
             for (int i = 0 ; i < hanoiCode.length; i++)
             {
-                code = code.concat(hanoiCode[i] + "\n\n\t");
+                code = code.concat(hanoiCode[i] + "\n&nbsp;&nbsp;");
 
             }
             code = code.concat("</b></pre>    </p>  </body></html>");
@@ -677,7 +664,6 @@ public class factorial extends javax.swing.JApplet {
     private javax.swing.JEditorPane codePane;
     private java.awt.Label header;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nValue;
