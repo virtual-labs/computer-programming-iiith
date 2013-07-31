@@ -213,6 +213,8 @@
   
   <!-- ******** ADD/OVERRIDE JAVASCRIPT FILES HERE ********* -->
   
+<?php include_once("analyticstracking.php") ?>
+
 
   <!-- ***************************************************** -->
   
