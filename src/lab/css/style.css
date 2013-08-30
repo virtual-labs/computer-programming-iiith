@@ -342,8 +342,15 @@ aside
 
 #experiment-article-breadcrumb
 {
- margin-left: 30px;
+ /*margin-left: 30px;*/
+ margin: 0 auto;
+ width: 1024px;
 }
+
+#lab-footer{
+	text-align: center;
+}
+
 
 #experiment-article-breadcrumb a:link, #experiment-article-breadcrumb a:visited
 {
