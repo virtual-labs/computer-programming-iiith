@@ -4,7 +4,7 @@
             "platform": {
                 "arch": "i386", 
                 "build_steps": {
-                    "build": ["make -C ../src/temp"], 
+                    "build": ["make -C ../src/temp/temp"], 
                     "configure": [], 
                     "post_build": [], 
                     "pre_build": [], 
