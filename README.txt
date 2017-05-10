@@ -21,7 +21,7 @@ You can make the above said changes by editing content.html. To update the chang
 2) Open the change.html file and open it in your fav. editor.
 3) Copy all content of change.html 
 4) Paste it after the last closing html tag </section> (you searched in Step1).
-5) Go to ui/src and run  " make theme=blue-icon"     on command terminal  to change theme to blue
+5) Go to ui/src and run  " make theme=blue-icon" on command terminal to change theme to blue 
 
 
 We had attached change.html in folder.  You can copy the whole content and paste it in content.html .
