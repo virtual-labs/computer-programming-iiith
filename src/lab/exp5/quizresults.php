@@ -79,8 +79,6 @@ echo "	<h2>Correct Answers</h2>
                 <br>
                 <li><b> What is printed when this program is executed</b></li>
                 4 <br>
-                <li><b> The function prototype (or definition) gives a summary of the function</b></li><br>
-                <li><b> The default return type of a function is int (or Integer).</b></li><br>
                 <br>
 
 </ol>";

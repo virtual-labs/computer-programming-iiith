@@ -10,12 +10,12 @@ $Q4 = $_POST['Q4'];
 $Q5 = $_POST['fib1'];
 
 echo "You answered the following questions correctly : ";
-if ($Q1==2)
+if ($Q1==4)
 {
 $total=$total+1;
 echo "1 ";
 }
-if ($Q2==2)
+if ($Q2==1)
 {
 $total=$total+1;
 echo "2 ";
