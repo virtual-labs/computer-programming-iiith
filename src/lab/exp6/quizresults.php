@@ -12,27 +12,27 @@ $Q6 = $_POST['fib1'];
 $Q7 = $_POST['fib2'];
 
 echo "You answered the following questions correctly : ";
-if ($Q1==2)
+if ($Q1==4)
 {
 $total=$total+1;
 echo "1 ";
 }
-if ($Q2==4)
+if ($Q2==1)
 {
 $total=$total+1;
 echo "2 ";
 }
-if ($Q3==2)
+if ($Q3==3)
 {
 $total=$total+1;
 echo "3 ";
 }
-if ($Q4==4)
+if ($Q4==1)
 {
 echo "4 ";
 $total=$total+1;
 }
-if ($Q5==1)
+if ($Q5==2)
 {
 $total=$total+1;
 echo "5 ";
@@ -41,7 +41,7 @@ if ((strcasecmp($Q6,"itself")==0)){
 $total= $total+1;
 echo "6 ";
 }
-if ((strcasecmp($Q7,"base case")==0) || (strcasecmp($Q7,"end-condition")==0)|| (strcasecmp($Q7,"end condition")==0) || (strcasecmp($Q7,"base-case")==0)){
+if ((strcasecmp($Q7,"base case")==0) || (strcasecmp($Q7,"end-condition")==0)|| (strcasecmp($Q7,"end condition")==0) || (strcasecmp($Q7,"base-case")==0)||strcasecmp($Q7,"basecase")==0){
 $total= $total+1;
 echo "7 ";
 }
