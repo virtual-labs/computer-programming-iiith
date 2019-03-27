@@ -121,7 +121,7 @@ if ($Q19==3)
 $total=$total+1;
 echo "19 ";
 }
-if ($Q20==2)
+if ($Q20==4)
 {
 $total=$total+1;
 echo "20 ";
@@ -370,7 +370,7 @@ echo "	<h2>Correct Answers</h2>
                 }
 		</code></pre>
 
-		World<br>
+		Invalid Syntax<br>
  		<br>       
 
 </ol>";
