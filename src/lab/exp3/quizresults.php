@@ -111,7 +111,7 @@ if ($Q17==3)
 $total=$total+1;
 echo "17 ";
 }
-if ($Q18==3)
+if ($Q18==1)
 {
 $total=$total+1;
 echo "18 ";
