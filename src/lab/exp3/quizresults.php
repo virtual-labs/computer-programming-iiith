@@ -46,7 +46,7 @@ if ($Q4==1)
 echo "4 ";
 $total=$total+1;
 }
-if ($Q5==3)
+if ($Q5==1)
 {
 $total=$total+1;
 echo "5 ";
@@ -170,8 +170,11 @@ echo "	<h2>Correct Answers</h2>
 
 
 		<pre><code>
-for(int i =1; i<100; i++)
-printf(.Hello World.);
+int i = 1 ;             
+while ( 1 ) 
+{ 
+    i++ ; 
+}
 		</code></pre><br>
 
 
