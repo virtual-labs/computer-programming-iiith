@@ -95,7 +95,7 @@ echo '	<h2>Correct Answers</h2>
                 w[5] = \'n\';
                 printf("%s\n",w);
                 </pre>
-                segmentation fault<br>
+                indian<br>
                 <br>
 
                 <li><b> What will the follwing function output if word is "heLlO_WOrLd !" ?</b> </li>
