@@ -27,7 +27,7 @@ if ($Q3==2)
 $total=$total+1;
 echo "3 ";
 }
-if ($Q4==4)
+if ($Q4==1)
 {
 echo "4 ";
 $total=$total+1;
@@ -50,7 +50,7 @@ echo "<html>
 <head></head>";
 echo "<body class=\"page_bg\">";
 
-echo "<br>Total number of correct answers : ".$total."/9";
+echo "<br>Total number of correct answers : ".$total."/7";
 
 echo "	<h2>Correct Answers</h2>
 <br>
