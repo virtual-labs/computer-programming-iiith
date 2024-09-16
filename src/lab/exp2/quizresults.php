@@ -106,12 +106,12 @@ if ($Q16==3)
 $total=$total+1;
 echo "16 ";
 }
-if ($Q17==2)
+if ($Q17==3)
 {
 $total=$total+1;
 echo "17 ";
 }
-if ($Q18==2)
+if ($Q18==3)
 {
 $total=$total+1;
 echo "18 ";
@@ -320,7 +320,7 @@ echo "	<h2>Correct Answers</h2>
  		</code></pre>
  
 
-		Bye<br>
+		Invalid Syntax<br>
  		<br>          
 
             <li> <b>What will be the output for this code:</b></li> 
@@ -336,7 +336,7 @@ echo "	<h2>Correct Answers</h2>
                 }
 		</code></pre>
 
-		Bye<br>
+		Invalid Syntax<br>
  		<br>          
 
             <li> <b>What will be the output for this code:</b></li> 
