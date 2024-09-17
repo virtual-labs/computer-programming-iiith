@@ -165,7 +165,7 @@ echo "	<h2>Correct Answers</h2>
 		<br> 
 <b>Assume a='E' , b='5' and c='?' are  char type variables for the following questions</b><br><br> 
 <li><b>Calculate b-2</b></li> 
-		'C'<br> 
+		3<br> 
 		<br> 
 <li><b>Calculate b+c</b></li> 
 		't'<br> 
