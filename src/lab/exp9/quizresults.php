@@ -30,7 +30,7 @@ if ($Q4==4)
 echo "4 ";
 $total=$total+1;
 }
-if ((strcasecmp($Q5,"itself")==0)){
+if ((strcasecmp($Q5,"First")==0)){
 $total= $total+1;
 echo "5 ";
 }
