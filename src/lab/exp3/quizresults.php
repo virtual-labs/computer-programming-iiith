@@ -301,7 +301,7 @@ main()
    while(i < 2);
 } 
 		</code></pre>
-		1 2<br>
+		0 1<br>
 
 		<br>
 
