@@ -101,7 +101,7 @@ if ($Q15==1)
 $total=$total+1;
 echo "15 ";
 }
-if ($Q16==4)
+if ($Q16==2)
 {
 $total=$total+1;
 echo "16 ";
@@ -285,7 +285,7 @@ main()
    while(i > 1);
 }
 		</code></pre>
-Infinite Loop<br>
+Hello<br>
 		<br>
 
                 <li> <b>What is the output of the following code:</b></li> 
