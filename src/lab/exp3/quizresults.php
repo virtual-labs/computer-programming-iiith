@@ -96,7 +96,7 @@ if ($Q14==1)
 $total=$total+1;
 echo "14 ";
 }
-if ($Q15==1)
+if ($Q15==4)
 {
 $total=$total+1;
 echo "15 ";
@@ -268,7 +268,7 @@ main( )
 }
 
 		</code></pre>
-		Hello world<br>
+		Run Time Error<br>
 		<br>
 
 
